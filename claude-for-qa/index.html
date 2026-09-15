@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Using Claude for Complex QA Investigations | Rachel Amzaleg</title>
-  <meta name="description" content="A practical workflow for using Claude in complex QA investigations: structure evidence, generate hypotheses, narrow failures, design targeted tests and keep human quality ownership.">
+  <title>How to Use Claude in QA Investigations | Rachel Amzaleg</title>
+  <meta name="description" content="A simple practical guide for using Claude in QA investigations: give clear context, review logs, suggest possible causes, plan checks and build better tests.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://rachelamzaleg.github.io/claude-for-qa/">
-  <meta property="og:title" content="Using Claude for Complex QA Investigations">
-  <meta property="og:description" content="A practical workflow for using Claude to accelerate system-level QA investigation without outsourcing engineering judgment.">
+  <meta property="og:title" content="How to Use Claude in QA Investigations">
+  <meta property="og:description" content="A clear practical way to use Claude while investigating QA issues.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://rachelamzaleg.github.io/claude-for-qa/">
   <style>
@@ -55,18 +55,8 @@
       margin-bottom: 18px;
       padding: 0 4px;
     }
-    .brand {
-      color: #293961;
-      font-weight: 800;
-      text-decoration: none;
-      letter-spacing: -.02em;
-    }
-    .back {
-      color: #4156c7;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: .93rem;
-    }
+    .brand { color: #293961; font-weight: 800; text-decoration: none; letter-spacing: -.02em; }
+    .back { color: #4156c7; font-weight: 700; text-decoration: none; font-size: .93rem; }
     .hero {
       position: relative;
       overflow: hidden;
@@ -98,12 +88,7 @@
       line-height: 1.02;
       letter-spacing: -.045em;
     }
-    .dek {
-      max-width: 750px;
-      margin: 0;
-      color: rgba(247,249,255,.85);
-      font-size: 1.08rem;
-    }
+    .dek { max-width: 750px; margin: 0; color: rgba(247,249,255,.85); font-size: 1.08rem; }
     article {
       margin-top: 22px;
       padding: 40px 44px;
@@ -113,21 +98,15 @@
       box-shadow: 0 14px 44px rgba(36,52,82,.07);
       backdrop-filter: blur(8px);
     }
-    h2 {
-      margin: 38px 0 12px;
-      color: #142039;
-      font-size: 1.34rem;
-      line-height: 1.28;
-      letter-spacing: -.018em;
-    }
+    h2 { margin: 34px 0 10px; color: #142039; font-size: 1.3rem; line-height: 1.28; letter-spacing: -.018em; }
     h2:first-child { margin-top: 0; }
-    p { margin: 0 0 15px; color: #4b5870; }
+    p { margin: 0 0 14px; color: #4b5870; }
     strong { color: #1c2943; }
-    ul, ol { color: #4b5870; padding-left: 22px; }
-    li { margin: 8px 0; }
+    ul { color: #4b5870; padding-left: 22px; }
+    li { margin: 7px 0; }
     .principle {
-      margin: 28px 0;
-      padding: 22px 24px;
+      margin: 24px 0;
+      padding: 20px 22px;
       border-left: 4px solid #666bf6;
       border-radius: 14px;
       background: linear-gradient(135deg, #f7f8ff, #fbfaff);
@@ -135,8 +114,8 @@
       font-weight: 650;
     }
     .prompt {
-      margin: 22px 0 8px;
-      padding: 22px 24px;
+      margin: 20px 0 8px;
+      padding: 20px 22px;
       overflow-x: auto;
       border: 1px solid #e4e8f1;
       border-radius: 16px;
@@ -144,10 +123,6 @@
       color: #e8edf7;
       font: 500 .91rem/1.65 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       white-space: pre-wrap;
-    }
-    .small-note {
-      color: #748096;
-      font-size: .9rem;
     }
     .footer-card {
       margin-top: 20px;
@@ -170,8 +145,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Using Claude for Complex QA Investigations",
-    "description": "A practical workflow for using Claude in complex QA investigations while keeping engineering judgment and quality ownership with the tester.",
+    "headline": "How to Use Claude in QA Investigations",
+    "description": "A simple practical guide for using Claude while investigating QA issues.",
     "author": {
       "@type": "Person",
       "name": "Rachel Amzaleg",
@@ -190,86 +165,75 @@
 
     <header class="hero">
       <span class="eyebrow">QA & AI Notes</span>
-      <h1>Using Claude for Complex QA Investigations</h1>
-      <p class="dek">A practical way to use Claude as an investigation partner for system-level QA: organizing evidence, generating hypotheses, narrowing failures, designing targeted tests and accelerating repetitive work without outsourcing engineering judgment.</p>
+      <h1>How to Use Claude in QA Investigations</h1>
+      <p class="dek">Claude can save a lot of time in QA investigations. The trick is to give it the right information and use it to help you think — not to let it decide what the bug is.</p>
     </header>
 
     <article>
-      <h2>The useful role of AI in QA investigation</h2>
-      <p>Claude is most useful in QA when it helps reduce cognitive load around a complex system. The goal is not to ask, “What is the bug?” and accept an answer. The goal is to give the model structured evidence and use it to make the investigation faster, broader and more disciplined.</p>
-      <p>For system-level issues, that evidence may include logs, configuration, request and response data, database results, authentication behavior, environment differences and the exact sequence that produced the failure.</p>
-
-      <div class="principle">The model can accelerate the investigation. The tester still owns the evidence, the experiment and the conclusion.</div>
-
-      <h2>1. Start with context, not a giant log dump</h2>
-      <p>Before asking Claude to analyze anything, define the system boundary. A short, structured context is usually more useful than thousands of unfiltered log lines.</p>
+      <h2>Start with the problem</h2>
+      <p>Do not start by pasting a huge log and asking “what is wrong?”. First explain the issue in a few clear lines.</p>
       <ul>
-        <li><strong>Expected behavior:</strong> what should happen?</li>
-        <li><strong>Actual behavior:</strong> what happened instead?</li>
-        <li><strong>Reproduction sequence:</strong> what exact actions trigger it?</li>
-        <li><strong>Components involved:</strong> client, service, API, database, authentication, policy layer or background process.</li>
-        <li><strong>Evidence:</strong> only the relevant logs, configuration, SQL results and timestamps.</li>
-        <li><strong>Known constraints:</strong> what has already been ruled out?</li>
+        <li>What should happen?</li>
+        <li>What actually happens?</li>
+        <li>How do you reproduce it?</li>
+        <li>Which parts of the system are involved?</li>
+        <li>What have you already checked?</li>
       </ul>
-      <p>This creates a shared mental model before analysis starts.</p>
 
-      <h2>2. Ask for hypotheses, not certainty</h2>
-      <p>A productive prompt asks Claude to propose several explanations and show what evidence would support or contradict each one. This is much safer than asking for a single root cause too early.</p>
-      <div class="prompt">Given the system behavior and evidence below:
+      <div class="principle">Claude works much better when the problem is clear before the logs arrive.</div>
 
-1. List the 3-5 most plausible failure hypotheses.
-2. For each hypothesis, show which evidence supports it.
-3. Identify evidence that contradicts it or is still missing.
-4. Suggest the smallest test or observation that would distinguish between the hypotheses.
-5. Do not assume facts that are not present in the evidence.</div>
-      <p class="small-note">This turns the model into a hypothesis generator rather than an authority.</p>
+      <h2>Give only the useful evidence</h2>
+      <p>Add the logs, config, SQL results, API responses or timestamps that are relevant to the failure. If there is too much data, send it in parts.</p>
+      <p>I usually ask Claude to first summarize what it sees and separate facts from guesses. That already helps find gaps and contradictions.</p>
 
-      <h2>3. Correlate evidence across layers</h2>
-      <p>Many difficult QA failures are not visible in one log file. The useful work is often the correlation between layers: a client action, a token or authentication event, a service-side retry, a database result, a configuration value and a timestamp.</p>
-      <p>Claude can help organize those pieces into a timeline, identify inconsistencies and point out which component first deviates from the expected flow. The resulting timeline should then be checked directly against the source evidence.</p>
+      <h2>Ask for a few possible causes</h2>
+      <p>Do not ask Claude for “the root cause”. Ask for several possible causes and what would prove or disprove each one.</p>
+      <div class="prompt">Here is the issue and the evidence.
 
-      <h2>4. Turn the investigation into targeted experiments</h2>
-      <p>Once the likely failure area is narrower, ask for experiments rather than more explanation. Good experiments change one variable at a time: credentials, token freshness, connection reuse, configuration, request timing, database state, service restart or another relevant boundary.</p>
-      <p>The aim is to move from “this looks suspicious” to “changing X consistently changes Y.” That is where AI-assisted analysis becomes engineering evidence.</p>
+Give me 3-5 possible causes.
+For each one:
+- what evidence supports it
+- what does not fit
+- what should I check next
 
-      <h2>5. Use the same context to improve test design</h2>
-      <p>The investigation itself often exposes missing coverage. Claude can reuse the evidence to propose regression tests, negative scenarios, boundary conditions and concurrency or lifecycle cases that were not obvious before the failure.</p>
-      <p>A useful request is: “Based only on the confirmed failure mechanism, what tests would have detected this earlier?” This keeps test generation connected to actual system risk instead of producing a generic checklist.</p>
+Do not assume information I did not give you.</div>
 
-      <h2>6. Automate the repetitive parts, not the judgment</h2>
-      <p>AI is particularly effective for repetitive investigation tasks: extracting recurring patterns, comparing configurations, summarizing repeated failures, drafting focused scripts, generating SQL or API checks and turning a confirmed manual validation into a repeatable test.</p>
-      <p>The decision to automate should still depend on value: frequency, risk, cost of failure and how stable the flow is. Not every investigation needs a framework; sometimes a focused script or reusable check is enough.</p>
+      <h2>Check one thing at a time</h2>
+      <p>Once there are a few good options, test them. Change one thing at a time and see what happens.</p>
+      <p>For example: different credentials, fresh token, different config, new connection, service restart, another database state or a different request timing.</p>
+      <p>This is the important part: Claude can suggest what to check, but the real system result is what decides.</p>
 
-      <h2>7. Keep a clear evidence trail</h2>
-      <p>For every meaningful conclusion, keep the link back to the raw evidence. A good AI-assisted investigation should make it easier for another engineer to understand why the conclusion was reached, not harder.</p>
-      <p>A simple final structure works well: symptom → evidence → hypotheses → experiments → confirmed behavior → root cause or narrowed failure area → regression coverage.</p>
+      <h2>Use Claude to connect the dots</h2>
+      <p>In system QA the answer is often spread across several places. One event appears in the client, another in the service log, another in the database and another in authentication.</p>
+      <p>Claude is useful for putting these events in order and showing where the flow starts to look wrong. Then I go back and verify it in the real data.</p>
 
-      <h2>A compact working prompt</h2>
-      <div class="prompt">Act as a senior system QA investigation partner.
+      <h2>Turn the bug into better tests</h2>
+      <p>After the problem is understood, use the same information to ask: what test was missing?</p>
+      <p>Claude can help suggest regression tests, negative cases and edge cases based on the actual bug — not just produce a long generic test list.</p>
 
-I will provide:
-- expected behavior
-- actual behavior
+      <h2>Automate only what is worth it</h2>
+      <p>Claude can also help create a small script, SQL check, API validation or repeated test. I do not try to automate everything. If a simple check saves time and catches a real risk, that is enough.</p>
+
+      <h2>A simple prompt I can reuse</h2>
+      <div class="prompt">Help me investigate this QA issue.
+
+I will give you:
+- expected result
+- actual result
 - reproduction steps
-- architecture/context
-- logs and timestamps
-- configuration
-- database/API results
-- what has already been ruled out
+- relevant logs/config/data
+- what I already checked
 
-Your job:
-- organize the evidence
-- separate facts from assumptions
-- propose multiple hypotheses
-- rank them by evidence, not confidence language
-- identify missing observations
-- suggest the smallest discriminating experiments
-- propose regression tests only after the failure mechanism is supported
+Please:
+1. summarize the facts
+2. list the most likely causes
+3. tell me what information is missing
+4. suggest the next checks, one by one
+5. do not invent missing details
+6. after we confirm the cause, suggest regression tests</div>
 
-Do not invent missing system behavior. Flag uncertainty explicitly.</div>
-
-      <h2>The main principle</h2>
-      <p>The strongest use of Claude in QA is not “generate more tests.” It is helping an experienced tester reason across a large amount of system evidence more quickly while preserving skepticism, traceability and ownership of the final conclusion.</p>
+      <h2>The rule I keep</h2>
+      <p>Claude is there to save time, organize information and help me think of things I may have missed. I still verify everything against the real system before I decide what happened.</p>
     </article>
 
     <div class="footer-card">
