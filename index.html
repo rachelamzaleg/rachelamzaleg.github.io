@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rachel Amzaleg | Senior System QA & Quality Engineering</title>
-  <meta name="description" content="Rachel Amzaleg is a Senior System QA and Quality Engineering professional in Israel specializing in complex systems, cybersecurity, data security, cloud, integration testing, QA leadership and AI-assisted QA.">
+  <meta name="description" content="Rachel Amzaleg is a Senior System QA and Quality Engineering professional specializing in complex systems, cybersecurity, data security, cloud and AI-assisted QA.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://rachelamzaleg.github.io/">
   <meta property="og:title" content="Rachel Amzaleg | Senior System QA & Quality Engineering">
@@ -17,325 +17,82 @@
       color: #172033;
       background: #f4f7fb;
       line-height: 1.68;
-      font-synthesis: none;
     }
-
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       min-height: 100vh;
       background:
-        radial-gradient(circle at 8% 2%, rgba(104, 92, 255, .10), transparent 30rem),
-        radial-gradient(circle at 92% 18%, rgba(35, 116, 255, .08), transparent 28rem),
+        radial-gradient(circle at 8% 2%, rgba(104,92,255,.10), transparent 30rem),
+        radial-gradient(circle at 92% 18%, rgba(35,116,255,.08), transparent 28rem),
         linear-gradient(180deg, #f8faff 0%, #f3f6fb 45%, #eef3f9 100%);
     }
-
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: .22;
-      background-image:
-        linear-gradient(rgba(44, 62, 92, .05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(44, 62, 92, .05) 1px, transparent 1px);
+      opacity: .20;
+      background-image: linear-gradient(rgba(44,62,92,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(44,62,92,.05) 1px, transparent 1px);
       background-size: 38px 38px;
       mask-image: linear-gradient(to bottom, black, transparent 72%);
     }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      width: min(1060px, calc(100% - 36px));
-      margin: 0 auto;
-      padding: 44px 0 64px;
-    }
-
+    .wrap { position: relative; z-index: 1; width: min(1060px, calc(100% - 36px)); margin: 0 auto; padding: 44px 0 64px; }
     header {
       position: relative;
       overflow: hidden;
       padding: 64px 58px 54px;
       margin-bottom: 24px;
-      border: 1px solid rgba(255, 255, 255, .16);
       border-radius: 28px;
       color: #fff;
-      background:
-        radial-gradient(circle at 88% 15%, rgba(137, 114, 255, .36), transparent 23rem),
-        radial-gradient(circle at 18% 100%, rgba(45, 144, 255, .20), transparent 26rem),
-        linear-gradient(135deg, #11192d 0%, #172445 48%, #22205d 100%);
-      box-shadow: 0 24px 70px rgba(28, 37, 72, .23);
+      background: radial-gradient(circle at 88% 15%, rgba(137,114,255,.36), transparent 23rem), radial-gradient(circle at 18% 100%, rgba(45,144,255,.20), transparent 26rem), linear-gradient(135deg, #11192d 0%, #172445 48%, #22205d 100%);
+      box-shadow: 0 24px 70px rgba(28,37,72,.23);
     }
-
-    header::before,
-    header::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      pointer-events: none;
-    }
-
-    header::before {
-      width: 230px;
-      height: 230px;
-      top: -118px;
-      right: -50px;
-      border: 1px solid rgba(255,255,255,.18);
-      box-shadow: 0 0 0 28px rgba(255,255,255,.025), 0 0 0 58px rgba(255,255,255,.018);
-    }
-
-    header::after {
-      width: 12px;
-      height: 12px;
-      right: 82px;
-      bottom: 58px;
-      background: #9b91ff;
-      box-shadow: 24px -18px 0 rgba(92, 176, 255, .85), 52px 7px 0 rgba(255,255,255,.45);
-    }
-
-    h1 {
-      position: relative;
-      margin: 0 0 14px;
-      max-width: 760px;
-      font-size: clamp(2.75rem, 7vw, 5.25rem);
-      line-height: .98;
-      letter-spacing: -.055em;
-      font-weight: 760;
-    }
-
-    .tagline {
-      position: relative;
-      max-width: 850px;
-      margin: 0 0 24px;
-      font-size: clamp(1rem, 2vw, 1.17rem);
-      line-height: 1.55;
-      font-weight: 680;
-      color: #dbe6ff;
-    }
-
-    .intro {
-      position: relative;
-      max-width: 790px;
-      margin: 0;
-      font-size: 1.07rem;
-      color: rgba(246, 249, 255, .84);
-    }
-
-    .chips {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 30px;
-      max-width: 900px;
-    }
-
-    .chip {
-      padding: 7px 12px;
-      border: 1px solid rgba(255, 255, 255, .16);
-      border-radius: 999px;
-      color: #edf3ff;
-      background: rgba(255, 255, 255, .07);
-      backdrop-filter: blur(8px);
-      font-size: .89rem;
-      font-weight: 630;
-      letter-spacing: .005em;
-    }
-
-    section,
-    .card {
-      position: relative;
-      background: rgba(255,255,255,.88);
-      border: 1px solid rgba(35, 52, 82, .09);
-      box-shadow: 0 12px 38px rgba(36, 52, 82, .07);
-      backdrop-filter: blur(8px);
-    }
-
-    section {
-      padding: 34px 38px;
-      margin-bottom: 20px;
-      border-radius: 22px;
-    }
-
-    section::before {
-      content: "";
-      position: absolute;
-      left: 38px;
-      top: 0;
-      width: 48px;
-      height: 3px;
-      border-radius: 0 0 999px 999px;
-      background: linear-gradient(90deg, #5a66f6, #7b5cff);
-    }
-
-    h2 {
-      margin: 0 0 16px;
-      color: #142039;
-      font-size: 1.17rem;
-      line-height: 1.25;
-      letter-spacing: -.018em;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: #4b5870;
-    }
-
+    header::before { content: ""; position: absolute; width: 230px; height: 230px; top: -118px; right: -50px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); box-shadow: 0 0 0 28px rgba(255,255,255,.025), 0 0 0 58px rgba(255,255,255,.018); }
+    h1 { position: relative; margin: 0 0 14px; font-size: clamp(2.75rem, 7vw, 5.25rem); line-height: .98; letter-spacing: -.055em; font-weight: 760; }
+    .tagline { position: relative; max-width: 850px; margin: 0 0 24px; font-size: clamp(1rem,2vw,1.17rem); line-height: 1.55; font-weight: 680; color: #dbe6ff; }
+    .intro { position: relative; max-width: 790px; margin: 0; font-size: 1.07rem; color: rgba(246,249,255,.84); }
+    .chips { position: relative; display: flex; flex-wrap: wrap; gap: 9px; margin-top: 30px; max-width: 900px; }
+    .chip { padding: 7px 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: #edf3ff; background: rgba(255,255,255,.07); font-size: .89rem; font-weight: 630; }
+    section, .card { position: relative; background: rgba(255,255,255,.90); border: 1px solid rgba(35,52,82,.09); box-shadow: 0 12px 38px rgba(36,52,82,.07); backdrop-filter: blur(8px); }
+    section { padding: 34px 38px; margin-bottom: 20px; border-radius: 22px; }
+    section::before { content: ""; position: absolute; left: 38px; top: 0; width: 48px; height: 3px; border-radius: 0 0 999px 999px; background: linear-gradient(90deg,#5a66f6,#7b5cff); }
+    h2 { margin: 0 0 16px; color: #142039; font-size: 1.17rem; line-height: 1.25; letter-spacing: -.018em; }
+    p { margin: 0 0 14px; color: #4b5870; }
     p:last-child { margin-bottom: 0; }
-
     strong { color: #1c2943; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      min-height: 100%;
-      padding: 30px;
-      border-radius: 22px;
-      overflow: hidden;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      right: -58px;
-      bottom: -62px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(91,102,246,.10), rgba(123,92,255,.03));
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(91, 102, 246, .20);
-      box-shadow: 0 18px 46px rgba(36, 52, 82, .10);
-    }
-
-    .card h2 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .card h2::before {
-      content: "";
-      flex: 0 0 auto;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #5570ff, #8d65ff);
-      box-shadow: 0 0 0 6px rgba(95, 102, 246, .08);
-    }
-
-    main > section:nth-of-type(2) p,
-    main > section:nth-of-type(3) p {
-      padding: 11px 0;
-      margin: 0;
-      border-bottom: 1px solid #edf0f5;
-    }
-
-    main > section:nth-of-type(2) p:last-child,
-    main > section:nth-of-type(3) p:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    main > section:last-of-type {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding-top: 28px;
-      padding-bottom: 28px;
-      background: linear-gradient(135deg, rgba(245,247,255,.94), rgba(251,249,255,.94));
-    }
-
-    main > section:last-of-type h2 { margin: 0; }
-
-    main > section:last-of-type p {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin: 0;
-    }
-
-    a {
-      color: #334ed1;
-      font-weight: 700;
-      text-decoration: none;
-      transition: color .16s ease, transform .16s ease, background .16s ease;
-    }
-
-    main > section:last-of-type a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 8px 13px;
-      border: 1px solid rgba(67, 79, 170, .13);
-      border-radius: 11px;
-      background: rgba(255,255,255,.72);
-      box-shadow: 0 4px 14px rgba(39, 51, 93, .05);
-    }
-
-    main > section:last-of-type a:hover {
-      color: #202d9a;
-      background: #fff;
-      transform: translateY(-1px);
-    }
-
-    footer {
-      padding: 24px 8px 4px;
-      text-align: center;
-      color: #7b869a;
-      font-size: .9rem;
-      letter-spacing: .01em;
-    }
-
-    @media (max-width: 760px) {
-      .wrap {
-        width: min(100% - 24px, 1060px);
-        padding: 20px 0 42px;
-      }
-
-      header {
-        padding: 42px 24px 34px;
-        border-radius: 22px;
-      }
-
-      h1 {
-        font-size: clamp(2.55rem, 15vw, 4rem);
-      }
-
-      .tagline { font-size: .98rem; }
-      .intro { font-size: 1rem; }
-
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin-bottom: 20px; }
+    .card { padding: 30px; border-radius: 22px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 18px 46px rgba(36,52,82,.10); }
+    .card h2 { display: flex; align-items: center; gap: 10px; }
+    .card h2::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(135deg,#5570ff,#8d65ff); box-shadow: 0 0 0 6px rgba(95,102,246,.08); }
+    .notes { overflow: hidden; padding: 0; }
+    .notes-head { padding: 34px 38px 16px; }
+    .notes-head p { max-width: 700px; }
+    .note-link { display: block; margin: 0 20px 20px; padding: 28px 30px; border-radius: 18px; text-decoration: none; background: linear-gradient(135deg,#172445,#22205d); box-shadow: 0 14px 34px rgba(31,39,82,.18); transition: transform .18s ease, box-shadow .18s ease; }
+    .note-link:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(31,39,82,.23); }
+    .note-label { display: block; margin-bottom: 8px; color: #9aa9ff; font-size: .79rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .note-title { display: block; margin-bottom: 10px; color: #fff; font-size: 1.35rem; line-height: 1.2; font-weight: 780; letter-spacing: -.025em; }
+    .note-desc { display: block; color: rgba(241,245,255,.78); font-weight: 500; }
+    .arrow { display: inline-block; margin-top: 18px; color: #cbd4ff; font-weight: 760; }
+    a { color: #334ed1; font-weight: 700; text-decoration: none; }
+    .connect { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: linear-gradient(135deg,rgba(245,247,255,.94),rgba(251,249,255,.94)); }
+    .connect h2 { margin: 0; }
+    .connect p { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; }
+    .connect a { display: inline-flex; align-items: center; min-height: 38px; padding: 8px 13px; border: 1px solid rgba(67,79,170,.13); border-radius: 11px; background: rgba(255,255,255,.72); }
+    footer { padding: 24px 8px 4px; text-align: center; color: #7b869a; font-size: .9rem; }
+    @media (max-width:760px) {
+      .wrap { width: min(100% - 24px,1060px); padding: 20px 0 42px; }
+      header { padding: 42px 24px 34px; border-radius: 22px; }
+      h1 { font-size: clamp(2.55rem,15vw,4rem); }
       section { padding: 27px 24px; }
       section::before { left: 24px; }
-
       .grid { grid-template-columns: 1fr; }
       .card { padding: 26px 24px; }
-
-      main > section:last-of-type {
-        display: block;
-      }
-
-      main > section:last-of-type h2 {
-        margin-bottom: 14px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .card, a { transition: none; }
+      .notes-head { padding: 27px 24px 14px; }
+      .note-link { margin: 0 12px 12px; padding: 24px; }
+      .connect { display: block; }
+      .connect h2 { margin-bottom: 14px; }
     }
   </style>
   <script type="application/ld+json">
@@ -344,21 +101,9 @@
     "@type": "Person",
     "name": "Rachel Amzaleg",
     "url": "https://rachelamzaleg.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/rachel-amzaleg-new/",
-      "https://github.com/rachelamzaleg"
-    ],
+    "sameAs": ["https://www.linkedin.com/in/rachel-amzaleg-new/","https://github.com/rachelamzaleg"],
     "jobTitle": "Senior System QA / Quality Engineering",
-    "knowsAbout": [
-      "System Testing",
-      "Integration Testing",
-      "Quality Engineering",
-      "Cybersecurity",
-      "Data Security",
-      "Cloud Computing",
-      "QA Leadership",
-      "AI-Assisted QA"
-    ]
+    "knowsAbout": ["System Testing","Integration Testing","Quality Engineering","Cybersecurity","Data Security","Cloud Computing","QA Leadership","AI-Assisted QA"]
   }
   </script>
 </head>
@@ -369,16 +114,7 @@
       <p class="tagline">Senior System QA | Quality Engineering & QA Leadership | Cloud, Cybersecurity, Data Security | AI-Assisted QA</p>
       <p class="intro">Senior System QA and Quality Engineering professional with extensive experience in complex cybersecurity, data-security and cloud products. I combine hands-on system and integration testing with end-to-end quality ownership, technical investigation, risk-based planning and release readiness.</p>
       <div class="chips" aria-label="Areas of expertise">
-        <span class="chip">System & Integration Testing</span>
-        <span class="chip">Quality Engineering</span>
-        <span class="chip">Cybersecurity</span>
-        <span class="chip">Data Security</span>
-        <span class="chip">Cloud & Distributed Systems</span>
-        <span class="chip">Root-Cause Investigation</span>
-        <span class="chip">Risk-Based Testing</span>
-        <span class="chip">QA Leadership</span>
-        <span class="chip">Focused Automation</span>
-        <span class="chip">AI-Assisted QA</span>
+        <span class="chip">System & Integration Testing</span><span class="chip">Quality Engineering</span><span class="chip">Cybersecurity</span><span class="chip">Data Security</span><span class="chip">Cloud & Distributed Systems</span><span class="chip">Root-Cause Investigation</span><span class="chip">Risk-Based Testing</span><span class="chip">QA Leadership</span><span class="chip">Focused Automation</span><span class="chip">AI-Assisted QA</span>
       </div>
     </header>
 
@@ -394,13 +130,25 @@
         <p>In my current role, I validate complex data-security capabilities and MCP/JDBC flows, including AI-client integration, SQL tools, authentication, connectivity, policies and audit behavior.</p>
         <p>I investigate complex behavior by correlating product behavior, configuration, logs, database results and environment evidence.</p>
       </article>
-
       <article class="card">
         <h2>Leadership & Cloud</h2>
         <p>Previously, I led a distributed QA team of 10 across Israel and India while remaining hands-on in system and integration testing.</p>
         <p>My work included test strategy, release quality, risk-based testing, targeted automation and validation of cloud-native environments using OCI, Kubernetes and Rancher.</p>
       </article>
     </div>
+
+    <section class="notes">
+      <div class="notes-head">
+        <h2>QA & AI Notes</h2>
+        <p>Practical notes on using AI inside real quality-engineering work — investigation, test design, system reasoning and focused automation.</p>
+      </div>
+      <a class="note-link" href="/claude-for-qa/">
+        <span class="note-label">Practical Guide</span>
+        <span class="note-title">Using Claude for Complex QA Investigations</span>
+        <span class="note-desc">A structured workflow for organizing evidence, generating hypotheses, narrowing failures and designing targeted tests without outsourcing engineering judgment.</span>
+        <span class="arrow">Read the note →</span>
+      </a>
+    </section>
 
     <section>
       <h2>Experience Highlights</h2>
@@ -415,9 +163,9 @@
       <p><strong>Education:</strong> B.Ed. in Computer Science, Bayit Vegan College, Jerusalem.</p>
     </section>
 
-    <section>
+    <section class="connect">
       <h2>Connect</h2>
-      <p><a href="https://www.linkedin.com/in/rachel-amzaleg-new/" rel="me">LinkedIn</a> · <a href="https://github.com/rachelamzaleg" rel="me">GitHub</a> · <a href="mailto:rachelamzaleg@live.com">Email</a></p>
+      <p><a href="https://www.linkedin.com/in/rachel-amzaleg-new/" rel="me">LinkedIn</a><a href="https://github.com/rachelamzaleg" rel="me">GitHub</a><a href="mailto:rachelamzaleg@live.com">Email</a></p>
     </section>
 
     <footer>Rachel Amzaleg · Senior System QA & Quality Engineering</footer>
