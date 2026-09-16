@@ -19,14 +19,12 @@
 <div class="flow">Setup → Troubleshoot → Verify → Create runbook → Reuse</div>
 <h2>Use it again</h2><p>The runbook becomes team knowledge. Next time, a teammate gives Claude the runbook plus the new environment details and uses it to rebuild the setup without starting from zero.</p>
 <div class="key">If we solved a repeatable setup once, the next setup should be easier.</div>
-
 <div class="example">
-  <span class="example-label">Real QA example · sanitized</span>
+  <span class="example-label">Real QA Example</span>
   <h2>From one working setup to a reusable process</h2>
   <p>In a complex test environment, several configuration and integration steps had to be repeated before validation could begin. During the first successful setup, I used AI alongside the actual work to organize the sequence, capture verified fixes and separate the final working path from temporary troubleshooting.</p>
-  <p>Once the environment was stable, I converted that verified path into a reusable runbook with prerequisites, configurable values, verification points and known failure patterns. The benefit was simple: the next setup could start from a tested process instead of rebuilding the same knowledge from scratch.</p>
+  <p>Once the environment was stable, I converted that verified path into a reusable runbook with prerequisites, configurable values, verification points and known failure patterns. The next setup could start from a tested process instead of rebuilding the same knowledge from scratch.</p>
 </div>
-
 <div class="tool">
   <div class="tool-head"><h2>Try it with Claude</h2><button class="copy" onclick="copyPrompt(this)">Copy prompt</button></div>
   <pre class="prompt" id="runbookPrompt">Turn the setup we just completed into a reusable runbook.
@@ -46,9 +44,6 @@ Write it so another team member can give this runbook to Claude and repeat the s
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
 </main>
 <script>
-function copyPrompt(button){
-  const text=document.getElementById('runbookPrompt').innerText;
-  navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Copied';setTimeout(()=>button.textContent=old,1400);});
-}
+function copyPrompt(button){const text=document.getElementById('runbookPrompt').innerText;navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Copied';setTimeout(()=>button.textContent=old,1400);});}
 </script>
 </body></html>
