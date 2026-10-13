@@ -31,28 +31,19 @@ a{color:inherit}a:focus-visible{outline:3px solid #645df6;outline-offset:4px}
 .brand-mark{display:grid;place-items:center;width:41px;height:41px;border-radius:13px;background:#1d2d50;color:white;font-size:.9rem;letter-spacing:.01em}
 .navlinks{display:flex;align-items:center;gap:25px}.navlinks a{text-decoration:none;color:#53617a;font-size:.86rem;font-weight:700}.navlinks a:hover{color:#4d46cc}
 .navlinks .nav-cta{padding:10px 16px;border:1px solid #cfd6e7;border-radius:100px;background:#fff;color:#263b68}
-.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.13fr .87fr;gap:40px;align-items:center;padding:65px 61px 62px;border-radius:30px;background:radial-gradient(circle at 95% 4%,rgba(129,224,216,.18),transparent 24rem),radial-gradient(circle at 68% 100%,rgba(113,100,255,.22),transparent 22rem),linear-gradient(125deg,#101e39,#172a50 68%,#15244a);color:#fff;box-shadow:0 24px 60px rgba(34,52,92,.16)}
-.hero:after{content:"";position:absolute;inset:auto -110px -190px auto;width:440px;height:440px;border:1px solid rgba(255,255,255,.075);border-radius:50%;pointer-events:none}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#b7c6f5;font-size:.76rem;letter-spacing:.13em;font-weight:800;text-transform:uppercase}
-.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 5px rgba(129,224,216,.12)}
-h1{margin:20px 0 19px;max-width:600px;font-size:clamp(2.65rem,5.1vw,4.65rem);font-weight:800;line-height:1.05;letter-spacing:-.055em}
-.hero-copy{margin:0;max-width:580px;color:#d8e3fa;font-size:1.05rem}
-.hero-sub{margin:16px 0 0;color:#acbfe7;font-size:.95rem}
-.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
-.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:12px;padding:12px 18px;font-size:.89rem;font-weight:800;transition:transform .16s ease,background .16s ease}
-.action:hover{transform:translateY(-2px)}
-.action.primary{color:#1c2443;background:#fff}.action.secondary{color:#f2f5ff;border:1px solid rgba(228,235,255,.3);background:rgba(255,255,255,.07)}
-.hero-visual{position:relative;z-index:1;padding:22px;border:1px solid rgba(218,232,255,.19);border-radius:21px;background:linear-gradient(155deg,rgba(255,255,255,.12),rgba(255,255,255,.035));box-shadow:0 14px 38px rgba(0,0,0,.11);backdrop-filter:blur(9px)}
-.visual-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid rgba(235,242,255,.15)}
-.visual-top strong{font-size:.77rem;letter-spacing:.105em;color:#dfebff}.visual-dots{display:flex;gap:6px}.visual-dots i{width:7px;height:7px;border-radius:50%;background:#8f9dc0}.visual-dots i:first-child{background:#83e2d3}
-.stages{list-style:none;margin:19px 0 0;padding:0}
-.stages li{display:flex;align-items:center;gap:14px;position:relative;padding:0 0 19px}.stages li:last-child{padding:0}
-.stages li:not(:last-child):before{content:"";position:absolute;left:16px;top:33px;bottom:1px;width:1px;background:rgba(167,192,229,.35)}
-.stage-icon{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 33px;height:33px;border:1px solid rgba(181,206,247,.4);border-radius:11px;color:#c7d7f6;background:#243858}
-.stage-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.stage-text strong{display:block;font-size:.9rem;line-height:1.2;color:#fff}.stage-text small{display:block;color:#9cb0d4;font-size:.75rem;margin-top:3px}
-.visual-note{display:flex;align-items:center;gap:8px;margin-top:20px;padding:11px 12px;border-radius:11px;background:rgba(126,224,211,.09);color:#bdede7;font-size:.77rem;font-weight:700}
-.visual-note:before{content:"✓";display:grid;place-items:center;flex:0 0 20px;height:20px;border-radius:50%;background:rgba(120,235,208,.18)}
+.hero{position:relative;overflow:hidden;padding:49px 54px 44px;border:1px solid #e3e9f3;border-radius:22px;background:radial-gradient(circle at 98% 4%,rgba(211,229,249,.43),transparent 28%),linear-gradient(120deg,#ffffff,#fafcff);box-shadow:0 9px 28px rgba(26,42,82,.035)}
+.hero:before{content:"";position:absolute;left:0;top:49px;bottom:43px;width:4px;border-radius:0 5px 5px 0;background:linear-gradient(180deg,#776bf0,#89c8df)}
+.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:9px;color:#596b8b;font-size:.71rem;letter-spacing:.075em;font-weight:750;text-transform:uppercase}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#63aca8}
+.eyebrow-divider{color:#b6c3d3;font-weight:500}
+.hero h1{margin:17px 0 11px;max-width:900px;color:#1c2b49;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:750;line-height:1.13;letter-spacing:-.048em}
+.hero-copy{margin:0;max-width:730px;color:#5b6b85;font-size:1rem;line-height:1.65}
+.hero-actions{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:23px}
+.action{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:10px;padding:10px 16px;font-size:.86rem;font-weight:750;transition:background .16s ease,color .16s ease}
+.action.primary{color:#fff;background:#2b3a62;border:1px solid #2b3a62}
+.action.primary:hover{background:#435581}
+.action.secondary{color:#4a49a4;background:transparent;border:0;padding:10px 0}
+.action.secondary:hover{text-decoration:underline;color:#33338c}
 .section{margin-top:43px;scroll-margin-top:30px}.section-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:18px}
 .kicker{display:block;margin-bottom:5px;color:#625bd3;font-size:.71rem;letter-spacing:.11em;font-weight:800;text-transform:uppercase}
 h2{font-size:clamp(1.55rem,2.3vw,2.05rem);line-height:1.18;letter-spacing:-.035em;margin:0}
@@ -83,9 +74,9 @@ h2{font-size:clamp(1.55rem,2.3vw,2.05rem);line-height:1.18;letter-spacing:-.035e
 .contact-links a{display:inline-block;padding:9px 13px;text-decoration:none;border-radius:10px;border:1px solid #dce3ee;font-size:.84rem;font-weight:750;color:#394b73;background:#f8faff}
 .contact-links a:hover{background:#eeeffd}
 footer{text-align:center;padding-top:22px;color:#8290a4;font-size:.81rem}
-@media(max-width:920px){.hero{gap:26px;padding:50px 38px}.results{grid-template-columns:repeat(2,1fr)}.result-card.feature{grid-column:1/-1;min-height:auto}.guide-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:740px){.hero{grid-template-columns:1fr}.hero-visual{max-width:520px;width:100%}.navlinks{gap:14px}.navlinks a:not(.nav-cta){display:none}.section-heading{display:block}.section-description{margin-top:9px}.contact{display:block}.contact-links{margin-top:16px}}
-@media(max-width:540px){.wrap{width:calc(100% - 24px)}.site-nav{padding:17px 2px}.brand-name{font-size:.87rem}.hero{padding:34px 25px;border-radius:22px}h1{font-size:2.55rem}.results{grid-template-columns:1fr}.result-card.feature{grid-column:auto}.result-card{min-height:0}.guide-grid{grid-template-columns:1fr}.guide{min-height:0}.section{margin-top:33px}.contact{padding:22px}.guide-spotlight{padding:22px}.round-arrow{flex-basis:40px;height:40px}}
+@media(max-width:920px){.results{grid-template-columns:repeat(2,1fr)}.result-card.feature{grid-column:1/-1;min-height:auto}.guide-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:740px){.hero{padding:35px 34px}.hero:before{top:34px;bottom:34px}.navlinks{gap:14px}.navlinks a:not(.nav-cta){display:none}.section-heading{display:block}.section-description{margin-top:9px}.contact{display:block}.contact-links{margin-top:16px}}
+@media(max-width:540px){.wrap{width:calc(100% - 24px)}.site-nav{padding:17px 2px}.brand-name{font-size:.87rem}.hero{padding:27px 24px;border-radius:16px}.hero:before{top:26px;bottom:26px}.hero h1{font-size:clamp(1.95rem,8vw,2.55rem)}.hero-copy{font-size:.95rem}.hero-actions{gap:7px 20px}.results{grid-template-columns:1fr}.result-card.feature{grid-column:auto}.result-card{min-height:0}.guide-grid{grid-template-columns:1fr}.guide{min-height:0}.section{margin-top:33px}.contact{padding:22px}.guide-spotlight{padding:22px}.round-arrow{flex-basis:40px;height:40px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.guide:hover,.guide-spotlight:hover,.action:hover{transform:none}}
 
 .path-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -135,37 +126,12 @@ footer{text-align:center;padding-top:22px;color:#8290a4;font-size:.81rem}
   </nav>
 
   <header class="hero">
-    <div>
-      <span class="eyebrow">Senior System QA · Cybersecurity · AI</span>
-      <h1>What happens<br>between systems?</h1>
-      <p class="hero-copy">I investigate the issues that routine tests miss — across APIs, identity, databases and security integrations.</p>
-      <p class="hero-sub">Technical investigation, evidence-led validation and practical AI-assisted QA.</p>
-      <div class="hero-actions">
-        <a class="action primary" href="#approach">Explore the approach <span aria-hidden="true">↗</span></a>
-        <a class="action secondary" href="/field-notes/">Find a QA field note <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="hero-visual" aria-label="QA investigation approach: Reproduce, Compare, Trace, Strengthen">
-      <div class="visual-top"><strong>FROM SYMPTOM TO EVIDENCE</strong><span class="visual-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-      <ol class="stages">
-        <li>
-          <span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5M8 10.5h5"></path></svg></span>
-          <span class="stage-text"><strong>Reproduce the issue</strong><small>Baseline &amp; failing conditions</small></span>
-        </li>
-        <li>
-          <span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h11M4 19h16"></path><circle cx="18" cy="12" r="2"></circle></svg></span>
-          <span class="stage-text"><strong>Compare the evidence</strong><small>Logs, data &amp; API behavior</small></span>
-        </li>
-        <li>
-          <span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"></path></svg></span>
-          <span class="stage-text"><strong>Trace the boundaries</strong><small>Identity, state &amp; integrations</small></span>
-        </li>
-        <li>
-          <span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M5.6 9a7 7 0 0 1 12-2L20 12M4 12l2.4 5a7 7 0 0 0 12-2"></path></svg></span>
-          <span class="stage-text"><strong>Strengthen coverage</strong><small>Risks, regressions &amp; reusable methods</small></span>
-        </li>
-      </ol>
-      <div class="visual-note">Evidence first · Human-led decisions</div>
+    <span class="eyebrow">Senior System QA <span class="eyebrow-divider" aria-hidden="true">/</span> Cybersecurity <span class="eyebrow-divider" aria-hidden="true">/</span> AI-assisted QA</span>
+    <h1>What happens between systems?</h1>
+    <p class="hero-copy">I investigate the issues routine tests miss — across APIs, authentication, databases and security integrations.</p>
+    <div class="hero-actions">
+      <a class="action primary" href="#approach">Explore my approach <span aria-hidden="true">↗</span></a>
+      <a class="action secondary" href="/field-notes/">Find a QA field note <span aria-hidden="true">→</span></a>
     </div>
   </header>
 
