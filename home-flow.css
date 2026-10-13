@@ -52,3 +52,35 @@ a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline
 @media(max-width:650px){.flow-page{width:calc(100% - 30px)}.flow-header{padding:16px 0;gap:11px}.flow-nav{gap:12px}.flow-nav>a{font-size:.82rem}.flow-hero{padding:41px 0}.flow-hero h1{font-size:clamp(2.1rem,9vw,3.15rem)}.flow-hero p.flow-lead{font-size:1.02rem}.flow-hero:after{width:145px;height:145px;top:12px}.flow-section{padding:25px 0 45px}.flow-expertise{grid-template-columns:1fr;gap:13px}.flow-topic{padding-top:16px}.flow-note-section{padding:26px 20px;margin-bottom:34px}.flow-search{flex-basis:100%;min-width:0;max-width:none}.flow-end{align-items:flex-start;flex-direction:column;gap:16px}}
 @media(max-width:390px){.flow-search{flex-wrap:wrap}.flow-search button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flow-button{transition:none}.flow-button:hover{transform:none}}
+
+
+/* Guides-first homepage: one route to articles, followed by a distinct About section. */
+.flow-guides-first{padding:57px 0 64px;scroll-margin-top:20px}
+.flow-guides-first .flow-section-label{font-size:.83rem;letter-spacing:0;margin-bottom:9px}
+.flow-guides-first h1{font-size:clamp(2.25rem,4.3vw,3.45rem);font-weight:800;letter-spacing:-.048em;line-height:1.22;margin:0 0 13px;color:#28314c}
+.flow-guides-first .flow-guide-intro{color:#586680;font-size:1.03rem;max-width:720px;line-height:1.75;margin:0 0 30px}
+.flow-guides-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:27px;align-items:stretch}
+.flow-guide-pick{display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-height:245px;padding:31px 33px;background:linear-gradient(132deg,#eeeafe,#f2f0ff 62%,#eaf8f5);border-radius:23px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.flow-guide-pick:hover{transform:translateY(-3px);box-shadow:0 15px 32px rgba(58,46,128,.095)}
+.flow-guide-pick small{display:block;color:#6754ad;font-size:.82rem;font-weight:800;margin-bottom:12px}
+.flow-guide-pick strong{display:block;font-size:clamp(1.3rem,2.2vw,1.65rem);line-height:1.35;letter-spacing:-.02em;color:#283352}
+.flow-guide-pick p{color:#566680;font-size:.95rem;line-height:1.7;margin:12px 0 0}
+.flow-guide-pick .flow-guide-arrow{font-size:.9rem;font-weight:800;color:#5444a7}
+.flow-guide-explore{display:flex;flex-direction:column;justify-content:space-between;gap:19px;padding:24px 0}
+.flow-guide-explore>a{font-weight:800;font-size:1rem;color:#594aad;text-decoration:none;align-self:flex-start}
+.flow-guide-explore>a:hover{text-decoration:underline}
+.flow-guide-explore form{display:block}
+.flow-guide-explore label{display:block;color:#273451;font-size:1.07rem;font-weight:780;margin:0 0 12px}
+.flow-guide-search-controls{display:flex;gap:9px}
+.flow-guide-search-controls input{width:100%;min-width:0;flex:1;border:1px solid #d7d3e7;border-radius:11px;padding:13px 14px;background:#fff;font:inherit;font-size:.98rem;color:#26334e}
+.flow-guide-search-controls button{flex:none;border:0;border-radius:11px;background:#5b4bb3;color:#fff;padding:11px 17px;font:inherit;font-size:.9rem;font-weight:800;cursor:pointer}
+.flow-guide-search-controls button:hover{background:#4c3a9e}
+.flow-about{border-top:1px solid #e5e3e9;padding:59px 0 56px;scroll-margin-top:20px}
+.flow-about-intro{max-width:770px;margin-bottom:32px}
+.flow-about-intro h2{font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.28;letter-spacing:-.035em;margin:0 0 13px;color:#263450}
+.flow-about-intro p{font-size:1.03rem;color:#55657e;line-height:1.8;margin:0}
+.flow-about .flow-expertise{gap:26px}
+.flow-about .flow-topic{border-top-width:2px;padding-top:19px}
+@media(max-width:760px){.flow-guides-grid{grid-template-columns:1fr;gap:10px}.flow-guide-pick{min-height:205px}.flow-guide-explore{padding:15px 3px}.flow-guides-first{padding:41px 0 43px}.flow-about{padding:43px 0}}
+@media(max-width:440px){.flow-guide-pick{padding:24px 22px;border-radius:18px}.flow-guide-search-controls{flex-wrap:wrap}.flow-guide-search-controls button{width:100%}.flow-guides-first h1{font-size:2.15rem}}
+@media(prefers-reduced-motion:reduce){.flow-guide-pick{transition:none}.flow-guide-pick:hover{transform:none}}
