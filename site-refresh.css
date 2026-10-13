@@ -125,3 +125,6 @@ body.theme-home .featured-note,body.theme-home .featured,body.theme-home .topic-
  body.theme-article .hero h1,body.theme-article .article-hero h1{font-size:1.95rem}
 }
 @media(prefers-reduced-motion:reduce){body.theme-home *,body.theme-library *,body.theme-article *{transition:none!important;animation:none!important}}
+
+/* Preserve filtering: the hidden attribute must beat the layout display rule. */
+body.theme-library .note[hidden],body.theme-library .note-card[hidden]{display:none!important}
