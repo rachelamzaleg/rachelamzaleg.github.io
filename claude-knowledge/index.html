@@ -32,10 +32,10 @@
 <h2>5. Move repeatable test work out of Claude</h2>
 <p>A practical QA automation pattern uses Playwright for test execution, hooks for integration with the test workflow, and a post-run script for recurring work after execution. Tasks that can be performed deterministically by a script need not be repeatedly delegated to an AI conversation.</p>
 <div class="flow">Playwright execution → Hooks → Post-run script → QA investigation when needed</div>
-<p>This pattern is based on applied work with Playwright hooks and a post-run script. The exact hook configuration, script logic and token usage measurements are not published here; they should be documented only from verified source files.</p>
-<h2>6. Verify savings, not assumptions</h2>
-<p>Compare token usage for equivalent tasks when usage data is available. A shorter prompt is useful only if it still produces accurate results. Avoid unverified claims about a percentage of tokens saved.</p>
-<div class="key">Use scripts for repeatable post-run operations; use AI for decisions that benefit from reasoning. Verify outcomes and measure token savings before quantifying them.</div>
+<p>Use hooks to enforce workflow guardrails and post-run scripts to handle repeatable results processing. Reserve interactive AI work for analysis that needs judgment.</p>
+<h2>6. Measure what actually helps</h2>
+<p>For a meaningful token comparison, measure the same task performed in different ways and verify the output quality. Track execution time and repeatability alongside token usage.</p>
+<div class="key">Automate predictable actions with scripts. Use AI where investigation and judgment add value.</div>
 <div class="example">
   <span class="example-label">Applied pattern · Browser QA</span>
   <h2>Explore once. Run the script again.</h2>
@@ -51,8 +51,8 @@
     <div><strong>~2,000</strong><span>tokens · eight saved tasks</span></div>
     <div><strong>~16,000</strong><span>tokens · one browser snapshot loaded into context</span></div>
   </div>
-  <p class="comparison-note">These are illustrative figures from the described workflow, not a like-for-like benchmark. The point is to avoid repeatedly loading large browser states when a verified script can do the work.</p>
-  <p><strong>Engineering decision:</strong> spend AI context on interpreting unusual behavior, not replaying deterministic UI actions. No internal hook definitions or scripts are shared.</p>
+  <p class="comparison-note">Illustrative token figures for different workloads, not a like-for-like benchmark.</p>
+  <p><strong>Engineering principle:</strong> Automate predictable tasks with scripts. Use AI where analysis and judgment add value.</p>
 </div>
 </section>
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
