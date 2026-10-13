@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA Field Notes | Rachel Amzaleg</title>
+<meta name="description" content="Find practical QA field notes on complex system investigation, reusable workflows, Claude and evidence-led AI-assisted quality.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://rachelamzaleg.github.io/field-notes/">
+<meta property="og:title" content="QA Field Notes | Rachel Amzaleg"><meta property="og:description" content="A searchable library of practical QA investigation and AI-assisted testing guides.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://rachelamzaleg.github.io/field-notes/">
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#16243e;background:#f5f7fb;line-height:1.55}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 100% 0,#e6edf9,transparent 32rem),#f5f7fb}
+a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #7c70f7;outline-offset:3px}
+.wrap{width:min(1070px,calc(100% - 40px));margin:auto}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 0}
+.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none}.links{display:flex;gap:22px;align-items:center}.links a{text-decoration:none;color:#52627e;font-weight:700;font-size:.87rem}.links a:hover{color:#4945b0}.links .back{background:#fff;border:1px solid #dce3ef;border-radius:9px;padding:9px 13px}
+.hero{padding:47px 0 33px}.kicker{display:inline-block;font-size:.73rem;letter-spacing:.12em;font-weight:800;color:#625acf;text-transform:uppercase}h1{max-width:700px;margin:11px 0 10px;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.058em;line-height:1.04} .lead{max-width:660px;color:#62718a;font-size:1.02rem;margin:0}
+.search-panel{padding:23px;border:1px solid #dee5f0;border-radius:19px;background:#fff;box-shadow:0 10px 28px rgba(24,41,78,.05)}
+.search-label{display:block;margin-bottom:10px;font-size:.84rem;font-weight:800;color:#344663}
+.search-box{display:flex;align-items:center;gap:11px;border:2px solid #dce4f0;border-radius:12px;padding:0 15px;transition:border-color .15s}
+.search-box:focus-within{border-color:#7b72e9}.search-icon{font-size:1.25rem;color:#6b76a1}
+.search-box input{display:block;min-width:0;width:100%;padding:15px 0;border:0;outline:none;background:transparent;font:inherit;color:#182b4b;font-size:1.02rem}
+.search-box input:focus-visible{outline:none}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid #dfe4ed;padding:9px 14px;border-radius:100px;background:#fff;color:#50627c;font:inherit;font-size:.81rem;font-weight:750;cursor:pointer}
+.filter:hover{border-color:#9998e8}.filter[aria-pressed="true"]{color:#fff;background:#242f54;border-color:#242f54}
+.count{color:#798397;font-size:.81rem;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.note{display:block;min-height:174px;padding:23px;border:1px solid #e0e6f0;border-radius:17px;background:#fff;text-decoration:none;box-shadow:0 6px 23px rgba(36,52,89,.035);transition:transform .17s,border-color .17s}
+.note:hover{transform:translateY(-2px);border-color:#b5b5ee}
+.note small{font-size:.71rem;text-transform:uppercase;letter-spacing:.09em;font-weight:800;color:#625bd4}
+.note h2{font-size:1.21rem;letter-spacing:-.025em;line-height:1.25;margin:12px 0 8px;color:#1e2b48}
+.note p{margin:0;color:#60718a;font-size:.9rem;max-width:440px}.note .go{display:block;margin-top:16px;color:#5b56c4;font-weight:800;font-size:.84rem}
+.no-results{display:none;margin-top:20px;border-radius:13px;padding:25px;background:#fff;border:1px dashed #b9c5da;color:#485a74}
+.no-results strong{display:block;margin-bottom:5px}
+.note[hidden]{display:none}
+footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:28px 0 42px;margin-top:24px;border-top:1px solid #e1e5ee;color:#748298;font-size:.8rem}
+footer a{color:#514bb5;text-decoration:none;font-weight:750}
+@media(max-width:690px){.wrap{width:calc(100% - 24px)}.hero{padding-top:30px}.cards{grid-template-columns:1fr}.note{min-height:0}.links{gap:12px}.links a:not(.back){display:none}.search-panel{padding:16px}footer{display:block}footer a{display:inline-block;margin-top:9px}}
+@media(prefers-reduced-motion:reduce){.note{transition:none}.note:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="top" aria-label="Site navigation">
+  <a class="brand" href="/">← Rachel Amzaleg</a>
+  <div class="links"><a href="/#approach">My approach</a><a href="/#about">About</a><a class="back" href="/">Portfolio home ↗</a></div>
+</nav>
+<main>
+<header class="hero">
+ <span class="kicker">The QA Playbook</span>
+ <h1>Find the field note<br>you need.</h1>
+ <p class="lead">Practical methods for investigating systems, reusing proven workflows and validating AI-assisted QA. Search a topic or pick a track.</p>
+</header>
+<section class="search-panel" aria-label="Search field notes">
+ <label for="note-search" class="search-label">Search topics, tools or techniques</label>
+ <div class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="note-search" name="q" type="search" placeholder="Try: Claude, logs, runbooks, validation..." autocomplete="off" aria-controls="note-results"></div>
+ <div class="toolbar">
+ <div class="filters" role="group" aria-label="Filter field notes">
+   <button class="filter" type="button" data-filter="all" aria-pressed="true">All notes</button>
+   <button class="filter" type="button" data-filter="investigate" aria-pressed="false">Investigate</button>
+   <button class="filter" type="button" data-filter="automate" aria-pressed="false">Automate &amp; Reuse</button>
+   <button class="filter" type="button" data-filter="validate" aria-pressed="false">Validate AI</button>
+ </div>
+ <span class="count" id="result-count" role="status" aria-live="polite">7 field notes</span>
+ </div>
+</section>
+<section class="cards" id="note-results" aria-label="Search results">
+ <a class="note" data-category="investigate" data-terms="system setup troubleshooting installation repeatable runbook commands linux windows database investigation" href="/claude-runbooks/"><small>Investigate · Runbooks</small><h2>From QA Setup to a Verified Runbook</h2><p>Capture only the tested setup path, prerequisites and checks so others can reproduce it.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="investigate" data-terms="system testing baseline evidence change impact investigate qa technical planning analysis" href="/ai-qa-workflow/"><small>Investigate · Workflow</small><h2>AI-Assisted QA: A Practical Workflow</h2><p>Understand a change, identify risks and move from evidence to verified results.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="automate" data-terms="Claude skill reuse repeated QA processes scripts checklist workflows automation" href="/claude-reuse/"><small>Automate &amp; Reuse · Skills</small><h2>Turn Repeated QA Work into a Claude Skill</h2><p>Preserve a proven method without repeating the whole investigation.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="automate" data-terms="context efficiency tokens hooks playwright script post-run automation knowledge references one fact one home" href="/claude-knowledge/"><small>Automate &amp; Reuse · Context</small><h2>Keep Context Focused and Reusable</h2><p>Organize stable instructions, changing references and task evidence.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="validate" data-terms="claude AI agents roles validator independent review writing drafting" href="/claude-roles/"><small>Validate AI · Roles</small><h2>Give Claude a Focused Role</h2><p>Separate analysis, drafting and independent validation.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="validate" data-terms="approval checkpoints guardrails evidence mistakes error stop quality" href="/ai-qa-checkpoints/"><small>Validate AI · Evidence</small><h2>QA Evidence &amp; Approval Checkpoints</h2><p>Know what has been verified, what remains uncertain and when to stop.</p><span class="go">Read note ↗</span></a>
+ <a class="note" data-category="validate" data-terms="quality improvement feedback loop rework validation lessons learning qa" href="/ai-qa-improvement/"><small>Validate AI · Learning</small><h2>Build a QA Improvement Loop</h2><p>Convert corrected mistakes into useful checks for the next cycle.</p><span class="go">Read note ↗</span></a>
+</section>
+<div id="no-results" class="no-results" role="status"><strong>No matches yet.</strong>Try fewer words or choose “All notes” to browse the full library.</div>
+</main>
+<footer><span>Rachel Amzaleg · Quality engineering field notes</span><a href="mailto:rachelamzaleg@live.com">Get in touch ↗</a></footer>
+</div>
+<script>
+(function(){
+  const input=document.getElementById('note-search');
+  const cards=Array.from(document.querySelectorAll('.note'));
+  const tabs=Array.from(document.querySelectorAll('.filter'));
+  const counter=document.getElementById('result-count');
+  const empty=document.getElementById('no-results');
+  const params=new URLSearchParams(window.location.search);
+  let category=params.get('cat')||'all';
+  if(!tabs.some(tab=>tab.dataset.filter===category))category='all';
+  input.value=params.get('q')||'';
+  const normalize=value=>String(value||'').toLocaleLowerCase().trim().normalize('NFKD');
+  function render(){
+    const terms=normalize(input.value).split(/\s+/).filter(Boolean);
+    let shown=0;
+    for(const card of cards){
+      const text=normalize(card.textContent+' '+card.dataset.terms);
+      const matches=(category==='all'||card.dataset.category===category)&&terms.every(term=>text.includes(term));
+      card.hidden=!matches;
+      if(matches)shown++;
+    }
+    for(const tab of tabs)tab.setAttribute('aria-pressed',String(tab.dataset.filter===category));
+    counter.textContent=shown+' '+(shown===1?'field note':'field notes');
+    empty.style.display=shown?'none':'block';
+    const url=new URL(window.location.href);
+    if(input.value.trim())url.searchParams.set('q',input.value.trim()); else url.searchParams.delete('q');
+    if(category!=='all')url.searchParams.set('cat',category);else url.searchParams.delete('cat');
+    window.history.replaceState(null,'',url.pathname+url.search);
+  }
+  input.addEventListener('input',render);
+  for(const tab of tabs)tab.addEventListener('click',()=>{category=tab.dataset.filter;render()});
+  render();
+})();
+</script>
+</body>
+</html>
