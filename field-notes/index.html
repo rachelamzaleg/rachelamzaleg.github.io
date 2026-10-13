@@ -78,39 +78,6 @@ footer a{color:#514bb5;text-decoration:none;font-weight:750}
 </main>
 <footer><span>Rachel Amzaleg · Quality engineering field notes</span><a href="mailto:rachelamzaleg@live.com">Get in touch ↗</a></footer>
 </div>
-<script>
-(function(){
-  const input=document.getElementById('note-search');
-  const cards=Array.from(document.querySelectorAll('.note'));
-  const tabs=Array.from(document.querySelectorAll('.filter'));
-  const counter=document.getElementById('result-count');
-  const empty=document.getElementById('no-results');
-  const params=new URLSearchParams(window.location.search);
-  let category=params.get('cat')||'all';
-  if(!tabs.some(tab=>tab.dataset.filter===category))category='all';
-  input.value=params.get('q')||'';
-  const normalize=value=>String(value||'').toLocaleLowerCase().trim().normalize('NFKD');
-  function render(){
-    const terms=normalize(input.value).split(/\s+/).filter(Boolean);
-    let shown=0;
-    for(const card of cards){
-      const text=normalize(card.textContent+' '+card.dataset.terms);
-      const matches=(category==='all'||card.dataset.category===category)&&terms.every(term=>text.includes(term));
-      card.hidden=!matches;
-      if(matches)shown++;
-    }
-    for(const tab of tabs)tab.setAttribute('aria-pressed',String(tab.dataset.filter===category));
-    counter.textContent=shown+' '+(shown===1?'field note':'field notes');
-    empty.style.display=shown?'none':'block';
-    const url=new URL(window.location.href);
-    if(input.value.trim())url.searchParams.set('q',input.value.trim()); else url.searchParams.delete('q');
-    if(category!=='all')url.searchParams.set('cat',category);else url.searchParams.delete('cat');
-    window.history.replaceState(null,'',url.pathname+url.search);
-  }
-  input.addEventListener('input',render);
-  for(const tab of tabs)tab.addEventListener('click',()=>{category=tab.dataset.filter;render()});
-  render();
-})();
-</script>
+<script src="/site-search.js" defer></script>
 </body>
 </html>
