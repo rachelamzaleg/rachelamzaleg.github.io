@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rachelamzaleg.github.io/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/field-notes/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/ai-qa-workflow/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/claude-runbooks/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/claude-reuse/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/claude-knowledge/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/claude-roles/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/ai-qa-checkpoints/</loc></url>
-  <url><loc>https://rachelamzaleg.github.io/ai-qa-improvement/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://rachelamzaleg.github.io/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/field-notes/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/field-notes/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/field-notes/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/field-notes/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/field-notes/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/field-notes/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/ai-qa-workflow/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-workflow/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-workflow/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/ai-qa-workflow/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-workflow/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-workflow/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/claude-runbooks/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-runbooks/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-runbooks/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/claude-runbooks/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-runbooks/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-runbooks/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/claude-reuse/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-reuse/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-reuse/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/claude-reuse/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-reuse/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-reuse/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/claude-knowledge/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-knowledge/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-knowledge/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/claude-knowledge/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-knowledge/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-knowledge/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/claude-roles/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-roles/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-roles/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/claude-roles/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/claude-roles/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/claude-roles/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/ai-qa-checkpoints/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-checkpoints/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-checkpoints/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/ai-qa-checkpoints/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-checkpoints/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-checkpoints/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/ai-qa-improvement/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-improvement/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-improvement/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/ai-qa-improvement/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/ai-qa-improvement/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/ai-qa-improvement/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/browser-automation/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/browser-automation/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/browser-automation/" /></url>
+  <url><loc>https://rachelamzaleg.github.io/he/browser-automation/</loc><xhtml:link rel="alternate" hreflang="en" href="https://rachelamzaleg.github.io/browser-automation/" /><xhtml:link rel="alternate" hreflang="he" href="https://rachelamzaleg.github.io/he/browser-automation/" /></url>
 </urlset>
