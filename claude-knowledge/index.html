@@ -24,9 +24,13 @@
   <div><strong>Delegate narrow investigations</strong> → return concise findings and evidence, rather than full exploratory transcripts.</div>
   <div><strong>Save a verified handoff</strong> → record commands, results and unresolved questions before a long session becomes unwieldy.</div>
 </div>
-<h2>5. Verify savings, not assumptions</h2>
+<h2>5. Move repeatable test work out of Claude</h2>
+<p>A practical QA automation pattern uses Playwright for test execution, hooks for integration with the test workflow, and a post-run script for recurring work after execution. Tasks that can be performed deterministically by a script need not be repeatedly delegated to an AI conversation.</p>
+<div class="flow">Playwright execution → Hooks → Post-run script → QA investigation when needed</div>
+<p>This pattern is based on applied work with Playwright hooks and a post-run script. The exact hook configuration, script logic and token usage measurements are not published here; they should be documented only from verified source files.</p>
+<h2>6. Verify savings, not assumptions</h2>
 <p>Compare token usage for equivalent tasks when usage data is available. A shorter prompt is useful only if it still produces accurate results. Avoid unverified claims about a percentage of tokens saved.</p>
-<div class="key">Less repeated context. Same evidence standard. Human validation stays essential.</div>
+<div class="key">Use scripts for repeatable post-run operations; use AI for decisions that benefit from reasoning. Verify outcomes and measure token savings before quantifying them.</div>
 <div class="example"><span class="example-label">Example</span><h2>Database authentication regression</h2><p>Load the authentication reference, the failing connection trace and the expected SQL checks — not the full project history. Store the validated reproduction and verification steps in a reusable runbook. If the AI session limit is reached, the saved SQL queries and log checks can still be run without AI.</p></div>
 </section>
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
