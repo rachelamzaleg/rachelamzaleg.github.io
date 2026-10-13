@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I Work with AI in QA | Rachel Amzaleg</title>
+<meta name="description" content="A practical, human-led AI-assisted QA workflow: evidence-based test planning, independent validation, live checks, approvals and reusable lessons.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://rachelamzaleg.github.io/ai-qa-workflow/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I Work with AI in QA | Rachel Amzaleg">
+<meta property="og:description" content="An evidence-first, human-led QA workflow that turns corrections into reusable practices.">
+<meta property="og:url" content="https://rachelamzaleg.github.io/ai-qa-workflow/">
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172033;background:#f4f7fb;line-height:1.65}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 8% 2%,rgba(104,92,255,.10),transparent 30rem),linear-gradient(180deg,#f8faff,#eef3f9)}
+a{color:#334ed1}a:focus-visible{outline:3px solid #676bf6;outline-offset:3px}
+.wrap{width:min(930px,calc(100% - 28px));margin:auto;padding:28px 0 56px}.top{display:flex;justify-content:space-between;gap:16px;margin:0 4px 18px}.top a{font-weight:750;text-decoration:none}
+.hero{padding:46px 44px;border-radius:26px;color:#fff;background:radial-gradient(circle at 90% 10%,rgba(137,114,255,.26),transparent 18rem),linear-gradient(135deg,#11192d,#172445 48%,#22205d);box-shadow:0 22px 60px rgba(28,37,72,.20)}
+.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#aeb9ff}
+h1{margin:10px 0 15px;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.08;letter-spacing:-.045em}.hero p{margin:0;max-width:760px;color:#e2e9f8;font-size:1.06rem}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.pill-row span{padding:7px 11px;border:1px solid rgba(204,215,255,.25);border-radius:999px;color:#e4e8ff;font-size:.82rem;font-weight:700}
+.content{margin-top:20px;padding:33px 38px;border-radius:22px;background:rgba(255,255,255,.93);box-shadow:0 12px 36px rgba(36,52,82,.07)}
+h2{margin:0 0 9px;color:#142039;font-size:1.35rem;line-height:1.3}h3{margin:0 0 7px;color:#192643;font-size:1.04rem}p{margin:0 0 13px;color:#4b5870}
+.intro{font-size:1.04rem}.section{margin-top:34px}.section:first-child{margin-top:0}.muted{font-size:.92rem;color:#647088}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 0;padding:0;list-style:none;counter-reset:workflow}
+.steps li{position:relative;counter-increment:workflow;min-height:150px;padding:18px 17px;border:1px solid #e6e9f0;border-radius:15px;background:#fafbff}
+.steps li::before{content:counter(workflow,decimal-leading-zero);display:block;margin-bottom:10px;color:#646bef;font-size:.83rem;font-weight:800}
+.steps strong{display:block;color:#1d2943;line-height:1.3}.steps span{display:block;margin-top:6px;color:#5c687c;font-size:.91rem}
+.decision{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.decision>div{padding:20px;border:1px solid #e3e7ef;border-radius:15px;background:#f8faff}.decision .halt{border-color:#bac6f5;background:#f0f3ff}.decision strong{display:block;margin-bottom:6px;color:#23365d}.decision p{margin:0;font-size:.93rem}
+.loop{margin-top:14px;padding:19px 20px;border:1px solid #dfe3ef;border-radius:15px;background:#f3f5f9}.loop strong{display:block;color:#243253;margin-bottom:6px}.loop p{margin:0}.sequence{font-size:.95rem;font-weight:750;color:#3549a0!important}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:16px}.panel{padding:19px 20px;border:1px solid #e6e9f0;border-radius:15px;background:#fafbff}.panel p{margin:0;font-size:.94rem}
+.role-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.role{padding:15px 17px;background:#f7f8ff;border:1px solid #e9eafb;border-radius:14px}.role strong{display:block;color:#243253}.role span{font-size:.92rem;color:#5e6a7b}
+.example{margin-top:15px;padding:20px 23px;border-radius:16px;background:linear-gradient(145deg,#fbfbff,#f3f5ff);border:1px solid rgba(82,91,196,.12)}
+.example p:last-child{margin:0}.small-label{display:block;margin-bottom:7px;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:#6269c9}
+.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.link-card{display:block;padding:20px;border:1px solid #e6e9f0;border-radius:15px;background:#f9faff;text-decoration:none}.link-card:hover{background:#f1f3ff}.link-card strong{display:block;color:#23345d}.link-card span{display:block;margin-top:5px;color:#5b687d;font-size:.9rem}
+.footer{margin-top:22px;text-align:center;color:#7b869a;font-size:.9rem}.footer a{font-weight:700;text-decoration:none}
+@media(max-width:700px){.hero{padding:36px 25px}.content{padding:27px 23px}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.decision,.grid,.links,.role-row{grid-template-columns:1fr}}
+@media(max-width:460px){.steps{grid-template-columns:1fr}.steps li{min-height:0}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How I Work with AI in QA","description":"A human-led AI-assisted QA practice that puts evidence, review checkpoints and repeatable improvement first.","datePublished":"2026-10-13","author":{"@type":"Person","name":"Rachel Amzaleg","url":"https://rachelamzaleg.github.io/"},"mainEntityOfPage":"https://rachelamzaleg.github.io/ai-qa-workflow/"}</script>
+</head>
+<body><main class="wrap">
+<nav class="top" aria-label="Breadcrumb"><a href="/">Rachel Amzaleg</a><a href="/">← Portfolio</a></nav>
+<header class="hero">
+<span class="eyebrow">QA practice · AI-assisted workflow</span>
+<h1>How I Work with AI in QA</h1>
+<p>I structure AI-assisted QA around evidence, focused responsibilities and human decisions. The goal is not to automate judgment: it is to make analysis, validation and repeated work more consistent and easier to reuse.</p>
+<div class="pill-row"><span>Evidence before conclusions</span><span>Human-led decisions</span><span>Reusable learning</span></div>
+</header>
+<article class="content">
+<section class="section" aria-labelledby="why">
+<h2 id="why">One QA practice, two outcomes</h2>
+<p class="intro">The same collaboration helps deliver the QA work—understanding changes, planning coverage, checking behavior and reporting results—and improve the process behind it. When a recurring correction reveals a weakness in the workflow, I turn the lesson into a specific reusable rule or skill.</p>
+<p>The assistant supports the work. I own the scope, technical judgment, approvals and final conclusions.</p>
+</section>
+<section class="section" aria-labelledby="flow">
+<h2 id="flow">The workflow: from change to verified result</h2>
+<p>Each step is grounded in requirements, live product behavior or recorded evidence. The sequence stops when a real problem needs my decision.</p>
+<ol class="steps">
+<li><strong>Prepare the context</strong><span>Establish the feature scope and verified environment baseline.</span></li>
+<li><strong>Analyze the change</strong><span>Clarify expected behavior, affected components and risks.</span></li>
+<li><strong>Define test coverage</strong><span>Prioritize scenarios, boundaries and integration paths.</span></li>
+<li><strong>Draft executable cases</strong><span>Write concise, customer-oriented cases with clear checks.</span></li>
+<li><strong>Run live checks</strong><span>Use verified scripts or APIs first; inspect UI and logs as needed.</span></li>
+<li><strong>Record and report</strong><span>Use actual results and live tracking data—not an old summary.</span></li>
+</ol>
+<div class="decision" aria-label="Workflow outcomes">
+<div class="halt"><strong>Unexpected behavior? Stop and bring evidence.</strong><p>No silent workaround, no assumed root cause and no automatic “bug or by design” verdict. I decide the next step.</p></div>
+<div><strong>Checks completed as expected?</strong><p>Record the observed result and prepare a concise status update from the live source of truth.</p></div>
+</div>
+<div class="loop">
+<strong>Improvement loop</strong>
+<p class="sequence">Correction → Retrospective → Update one reusable source → Review and commit</p>
+<p>A repeated mistake should change the process that caused it, not merely the latest draft.</p>
+</div>
+</section>
+<section class="section" aria-labelledby="roles">
+<h2 id="roles">Separate responsibilities, not uncontrolled agents</h2>
+<p>I use focused AI roles as a way to structure the work. They are responsibilities, not a claim that five autonomous agents always run together.</p>
+<div class="role-row">
+<div class="role"><strong>Coordinator</strong><span>Clarifies direction, keeps work in scope and manages checkpoints.</span></div>
+<div class="role"><strong>Documentation</strong><span>Drafts test cases, bug reports, test scope and summaries from evidence.</span></div>
+<div class="role"><strong>Validator</strong><span>Challenges omissions, assumptions and contradictions without silently rewriting the draft.</span></div>
+<div class="role"><strong>Hands-on QA</strong><span>Checks real environments, APIs, data, configuration and observed behavior.</span></div>
+<div class="role"><strong>Status</strong><span>Builds updates from current tracker results, not copied status files.</span></div>
+</div>
+<p class="muted" style="margin-top:12px">Stakeholder-facing drafts receive a separate review pass; lightweight internal tasks do not need unnecessary orchestration.</p>
+</section>
+<section class="section" aria-labelledby="safeguards">
+<h2 id="safeguards">Practical safeguards</h2>
+<div class="grid">
+<div class="panel"><h3>Evidence first</h3><p>Confirm a clean baseline, verify the claim, reproduce where possible and compare passing with failing conditions before narrowing conclusions.</p></div>
+<div class="panel"><h3>Explicit approval</h3><p>External updates, live changes, browser actions and destructive operations wait for my authorization. Drafting and read-only checks can stay lightweight.</p></div>
+<div class="panel"><h3>One fact, one home</h3><p>Skills hold repeatable methods; references hold product facts; task notes hold local context. Live tracking systems remain the source of status.</p></div>
+<div class="panel"><h3>Lean context, full capability</h3><p>Read the relevant section, not every log or document. Use targeted evidence and reset accumulated context at useful milestones.</p></div>
+</div>
+<div class="example">
+<span class="small-label">How a correction becomes a practice</span>
+<h3>Stop on the first meaningful failure</h3>
+<p>When a setup step fails, completing the rest of the checklist can hide the original problem. My rule is to stop, describe the actual failure and ask whether to investigate, repair the baseline or change direction. If that pattern recurs, I update the reusable procedure so the next run follows the better checkpoint.</p>
+</div>
+</section>
+<section class="section" aria-labelledby="related">
+<h2 id="related">Explore the methods behind the workflow</h2>
+<p>Each article focuses on one practical part of the approach.</p>
+<div class="links">
+<a class="link-card" href="/claude-runbooks/"><strong>From QA Setup to Claude Runbook →</strong><span>Keep the verified setup path for the next engineer.</span></a>
+<a class="link-card" href="/claude-reuse/"><strong>Turn Repeated QA Work into a Skill →</strong><span>Preserve a method after it proves useful.</span></a>
+<a class="link-card" href="/claude-knowledge/"><strong>One Fact, One Home →</strong><span>Avoid stale duplicates and unnecessary context.</span></a>
+<a class="link-card" href="/claude-roles/"><strong>Give Claude a Role →</strong><span>Separate drafting, validation and reporting.</span></a>
+</div>
+</section>
+</article>
+<div class="footer"><a href="/">← Back to the portfolio</a></div>
+</main></body></html>
