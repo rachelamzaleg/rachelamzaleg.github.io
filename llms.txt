@@ -1,0 +1,29 @@
+# Rachel Amzaleg — Practical System QA and AI-Assisted Quality
+
+> Professional portfolio and practical QA articles by Rachel Amzaleg, an Israel-based senior system QA and quality engineering professional.
+
+Rachel's work covers complex system and integration testing, cybersecurity and data security, API and database testing, Windows and Linux environments, risk-based quality engineering, and evidence-led technical investigation. The site also documents how AI assistants can support QA workflows while test results and decisions remain independently verified.
+
+## Profile and guide indexes
+
+- [Professional portfolio (English)](https://rachelamzaleg.github.io/): About the author, technical focus and contact links.
+- [פרופיל ומדריכים (עברית)](https://rachelamzaleg.github.io/he/): Hebrew home page.
+- [English QA guide library](https://rachelamzaleg.github.io/field-notes/): Technical guides and search.
+- [ספריית מדריכי QA בעברית](https://rachelamzaleg.github.io/he/field-notes/): Hebrew guide index.
+
+## Selected technical articles
+
+- [AI-Assisted QA: A Practical Workflow](https://rachelamzaleg.github.io/ai-qa-workflow/): Understand changes, plan risk-based tests, collect evidence and report verified findings.
+- [QA Evidence and Approval Checkpoints](https://rachelamzaleg.github.io/ai-qa-checkpoints/): Verification and decision checkpoints in AI-assisted QA.
+- [From QA Setup to a Verified Claude Runbook](https://rachelamzaleg.github.io/claude-runbooks/): Reuse only validated environment setup instructions.
+- [Turn Repeated QA Work into a Claude Skill](https://rachelamzaleg.github.io/claude-reuse/): Document a proven reusable process.
+- [Browser Automation and AI Token Efficiency](https://rachelamzaleg.github.io/browser-automation/): Practical browser automation and responsible use of AI context.
+- [Build a QA Improvement Loop](https://rachelamzaleg.github.io/ai-qa-improvement/): Make corrections and lessons useful in future testing.
+
+## Author and verification
+
+- [Rachel Amzaleg on LinkedIn](https://www.linkedin.com/in/rachel-amzaleg-new/)
+- [Rachel Amzaleg on GitHub](https://github.com/rachelamzaleg)
+- [XML sitemap](https://rachelamzaleg.github.io/sitemap.xml)
+
+These pages contain general technical material. They are not endorsements, employment guarantees, or evidence of any AI assistant recommending the author. For accurate quotations and current text, consult the linked pages directly.
