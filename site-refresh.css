@@ -128,3 +128,12 @@ body.theme-home .featured-note,body.theme-home .featured,body.theme-home .topic-
 
 /* Preserve filtering: the hidden attribute must beat the layout display rule. */
 body.theme-library .note[hidden],body.theme-library .note-card[hidden]{display:none!important}
+
+/* Reusable prompts in professional guides */
+.copy-prompt{margin:32px 0;padding:24px;border:1px solid #d7e2ed;border-radius:16px;background:#f4f8fc;box-sizing:border-box}
+.copy-prompt h2{margin:0 0 12px;font-size:1.45rem}
+.copy-prompt p{margin:0 0 14px;line-height:1.7}
+.copy-prompt .prompt-text{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.85;background:#fff;border:1px solid #dce5ef;border-radius:10px;padding:18px;max-height:390px;overflow:auto;color:#25364b;text-align:start}
+.copy-prompt .prompt-copy-button{display:inline-block;cursor:pointer;border:0;border-radius:9px;background:#174b72;color:#fff;font:inherit;font-weight:650;padding:11px 19px;margin-top:12px}
+.copy-prompt .prompt-copy-button:hover{background:#0d3454}
+@media(max-width:600px){.copy-prompt{padding:16px}.copy-prompt .prompt-text{padding:12px}}
