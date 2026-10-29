@@ -75,3 +75,22 @@
 .portfolio-v2 .copy-prompt h2{margin:0 0 12px}
 .portfolio-v2 .copy-prompt .prompt-text{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.85;background:white;border:1px solid #dce5ef;border-radius:10px;padding:18px;max-height:390px;overflow:auto;color:#25364b;text-align:start}
 .portfolio-v2 .copy-prompt .prompt-copy-button{cursor:pointer;border:0;border-radius:9px;background:#174b72;color:#fff;font:inherit;font-weight:650;padding:11px 19px;margin-top:12px}
+
+/* Unified polish for home, guide directory and new articles */
+.portfolio-v2{max-width:1080px}
+.portfolio-v2 .hero{padding:clamp(42px,6vw,66px) 0 clamp(34px,5vw,54px)}
+.portfolio-v2 .hero h1{font-size:clamp(2.05rem,4.4vw,3.55rem);line-height:1.22;letter-spacing:-.028em}
+.portfolio-v2 .hero .lead{max-width:72ch;line-height:1.82}
+.portfolio-v2 .hero-title-second{display:block;margin-top:.22em}
+.portfolio-v2 section:not(.hero){padding-block:clamp(30px,4vw,44px)}
+.portfolio-v2 .grid article,.portfolio-v2 .note{border-radius:14px;box-shadow:0 4px 16px rgba(28,58,76,.035)}
+.portfolio-v2 .note{display:block;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.portfolio-v2 .note:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(28,58,76,.08)}
+.portfolio-v2 .note h3{font-size:1.1rem;line-height:1.5}
+.portfolio-v2 .note p{margin:0;color:#4a5c6c}
+.portfolio-v2 .copy-prompt .prompt-text{max-width:100%;font-size:.96rem}
+.portfolio-v2 .copy-prompt .prompt-copy-button:focus-visible{outline:3px solid #72a9c4;outline-offset:3px}
+html[dir="rtl"] .portfolio-v2 .subtle{margin-left:0;margin-right:18px}
+.portfolio-v2 footer{margin-top:30px}
+@media(max-width:700px){.portfolio-v2{padding-inline:19px}.portfolio-v2 .nav{align-items:flex-start;flex-direction:column;gap:12px}.portfolio-v2 .grid,.portfolio-v2 .notes{grid-template-columns:1fr}.portfolio-v2 .hero{padding-block:40px}.portfolio-v2 .hero .lead{font-size:1.06rem}.portfolio-v2 .subtle{display:inline-block;margin:12px 0!important}}
+@media(prefers-reduced-motion:reduce){.portfolio-v2 .note{transition:none}}
