@@ -137,3 +137,18 @@ body.theme-library .note[hidden],body.theme-library .note-card[hidden]{display:n
 .copy-prompt .prompt-copy-button{display:inline-block;cursor:pointer;border:0;border-radius:9px;background:#174b72;color:#fff;font:inherit;font-weight:650;padding:11px 19px;margin-top:12px}
 .copy-prompt .prompt-copy-button:hover{background:#0d3454}
 @media(max-width:600px){.copy-prompt{padding:16px}.copy-prompt .prompt-text{padding:12px}}
+
+/* Unified editorial polish for bilingual guide pages */
+body.theme-article{font-size:16px}
+body.theme-article .article-layout,body.theme-article main{min-width:0}
+body.theme-article h1{font-size:clamp(2rem,4.2vw,3.2rem)!important;line-height:1.24!important;letter-spacing:-.025em!important;overflow-wrap:break-word}
+body.theme-article h2{font-size:clamp(1.35rem,2.6vw,1.8rem);line-height:1.4}
+body.theme-article p,body.theme-article li{line-height:1.85}
+body.theme-article section{scroll-margin-top:25px}
+body.theme-article .copy-prompt{max-width:860px;margin:36px auto;padding:clamp(18px,3vw,28px);border:1px solid #d5e3e9;background:#f3f8fa;box-shadow:0 8px 26px rgba(26,59,78,.045)}
+body.theme-article .copy-prompt .prompt-text{direction:inherit;max-height:440px;font-size:.94rem;line-height:1.85;border-color:#d8e4e9}
+body.theme-article .copy-prompt .prompt-copy-button{transition:background .15s ease}
+body.theme-article .copy-prompt .prompt-copy-button:focus-visible{outline:3px solid #72a9c4;outline-offset:3px}
+body.theme-article a{overflow-wrap:anywhere}
+html[dir="rtl"] body.theme-article .copy-prompt .prompt-text{text-align:right}
+@media(max-width:650px){body.theme-article .copy-prompt{margin-inline:0}body.theme-article .copy-prompt .prompt-text{max-height:350px}}
