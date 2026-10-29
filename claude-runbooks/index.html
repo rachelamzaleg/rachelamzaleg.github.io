@@ -27,7 +27,11 @@ Exclude secrets, failed attempts and guesses.
 Stop and ask when a configuration fact is unknown.</pre></div>
 </section>
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
-</main>
+<section class="copy-prompt" aria-label="Ready-to-use prompt"><h2>Ready to apply it? Copy the prompt</h2><p>Paste this prompt into an AI assistant and adapt it to your task.</p><pre class="prompt-text" dir="ltr">Verified setup runbook
+
+Help turn a setup I have already verified into a reusable runbook. Ask which commands and steps were confirmed; do not invent commands. Organize prerequisites, steps, validation checks, stop conditions and placeholders. Exclude secrets.
+
+Rules: Ask focused questions when information is missing. Do not treat hypotheses as facts, invent test results, or request secrets. Propose the next step and wait for my response.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy prompt',2000)})">Copy prompt</button></section></main>
 <script>
 function copyPrompt(button){const text=document.getElementById('runbookPrompt').innerText;navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Copied';setTimeout(()=>button.textContent=old,1400);});}
 </script>
