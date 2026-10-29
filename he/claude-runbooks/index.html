@@ -9,10 +9,7 @@
 <section><h2>שומרים את הדרך שהצליחה</h2><p>מתעדים דרישות מקדימות, פקודות שנבדקו, הגדרות חשובות ובדיקה אחרי כל שלב. לא מעתיקים ניחושים, סיסמאות או ניסיונות שלא עזרו.</p><div class="flow">התקנה ← בדיקה ← תיעוד ← שימוש חוזר</div></section>
 <section><h2>דואגים שאפשר יהיה לחזור על זה</h2><p>משתמשים בשדות שאפשר להחליף עבור פרטי סביבה שונים. אחרי כל שלב חשוב מוסיפים דרך לבדוק הצלחה. אם בדיקה נכשלת — עוצרים.</p><div class="highlight">Runbook טוב שומר תהליך מוכח, לא את כל שיחת פתרון התקלות.</div></section>
 <section><h2>דוגמה פשוטה</h2><p>אחרי שחיבור של שירות למסד נתונים עובד, שומרים רק את סדר ההתקנה, הפרטים שחייבים להגדיר ופקודות הבדיקה המאומתות.</p></section>
-<section><h2>דוגמת הנחיה ל־Claude</h2><div class="tool"><div class="tool-head"><strong>Prompt מוכן</strong><button class="copy-btn" type="button" onclick="copyGuidePrompt(this)">העתקה</button></div><pre id="guide-prompt" class="prompt">Create a reusable QA setup runbook using only verified steps.
-Include prerequisites, commands, placeholders and verification checks.
-Exclude secrets, failed attempts and guesses.
-Stop and ask when a configuration fact is unknown.</pre></div></section><section class="copy-prompt" aria-label="פרומפט מוכן לשימוש"><h2>רוצים ליישם? העתיקו את הפרומפט</h2><p>פרומפט שאפשר להדביק בכל עוזר AI ולהתאים למשימה שלכם.</p><pre class="prompt-text" dir="rtl">יצירת Runbook מסביבת בדיקות מאומתת
+<section class="copy-prompt" aria-label="פרומפט מוכן לשימוש"><h2>רוצים ליישם? העתיקו את הפרומפט</h2><p>פרומפט שאפשר להדביק בכל עוזר AI ולהתאים למשימה שלכם.</p><pre class="prompt-text" dir="rtl">יצירת Runbook מסביבת בדיקות מאומתת
 
 עזור לי להפוך תהליך התקנה שכבר עבד ל־Runbook חוזר. שאל אילו שלבים ופקודות אומתו; אל תמציא פקודות. סדר דרישות מקדימות, צעדים, בדיקות הצלחה, תנאי עצירה ופרמטרים להחלפה. אל תכלול סודות.
 
@@ -22,4 +19,4 @@ Stop and ask when a configuration fact is unknown.</pre></div></section><section
 
 לפני פעולות כתיבה, שינוי הגדרות, מחיקת נתונים, הפעלת תהליכים בעלי השפעה או בדיקה בסביבת Production, בקש אישור מפורש. אל תציג בדיקה מוצעת כאילו בוצעה, ואל תסיק Root Cause בלי ראיות.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='הועתק!';setTimeout(()=>this.textContent='העתקת הפרומפט',2000)})">העתקת הפרומפט</button></section></article>
 <nav class="article-nav" aria-label="מעבר בין מדריכים"><a class="back" href="/he/field-notes/">← לכל המדריכים ולחיפוש</a><a href="/he/ai-qa-improvement/">→ המדריך הקודם: איך משפרים את הבדיקות מפעם לפעם</a><a href="/he/claude-reuse/">המדריך הבא: להפוך עבודה שחוזרת ל־Claude Skill ←</a></nav>
-</main><footer>Rachel Amzaleg · QA ומדריכים מעשיים</footer></div><script>function copyGuidePrompt(button){const el=document.getElementById('guide-prompt');navigator.clipboard.writeText(el.textContent).then(()=>{button.textContent='הועתק!';setTimeout(()=>{button.textContent='העתקה'},1500)}).catch(()=>{button.textContent='העתיקו ידנית'})}</script></body></html>
+</main><footer>Rachel Amzaleg · QA ומדריכים מעשיים</footer></div></body></html>
