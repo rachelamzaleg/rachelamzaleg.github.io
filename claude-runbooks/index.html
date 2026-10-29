@@ -21,10 +21,7 @@
 <nav class="top"><a href="/">Rachel Amzaleg</a><a href="/">← Home</a></nav>
 <header class="hero"><span class="eyebrow">QA + Claude</span><h1>Setup Worked? Don't Start from Scratch Next Time</h1><p class="guide-subtitle">Turn a verified environment setup into a reusable runbook with tested commands, checkpoints and clear recovery steps.</p></header>
 <section class="content">
-<h2>Verify the baseline</h2><p>Start with an official installation, then confirm the working environment before introducing changes.</p><h2>Document the working path</h2><p>Capture verified commands, prerequisites, configuration and validation checks. Remove guesses, secrets and failed attempts.</p><div class="flow">Setup → Verify → Document → Reuse</div><h2>Keep it repeatable</h2><p>Use placeholders for environment-specific details. Include a check after every critical step and stop when it fails.</p><div class="key">A runbook preserves a proven procedure, not a full troubleshooting transcript.</div><div class="example"><span class="example-label">Example</span><h2>Database test setup</h2><p>Document the validated sequence for connecting services and a database, including checks that confirm each setup stage.</p></div><div class="tool"><div class="tool-head"><h2>Runbook prompt</h2><button class="copy" onclick="copyPrompt(this)">Copy prompt</button></div><pre class="prompt" id="runbookPrompt">Create a reusable QA setup runbook using only verified steps.
-Include prerequisites, commands, placeholders and verification checks.
-Exclude secrets, failed attempts and guesses.
-Stop and ask when a configuration fact is unknown.</pre></div>
+<h2>Verify the baseline</h2><p>Start with an official installation, then confirm the working environment before introducing changes.</p><h2>Document the working path</h2><p>Capture verified commands, prerequisites, configuration and validation checks. Remove guesses, secrets and failed attempts.</p><div class="flow">Setup → Verify → Document → Reuse</div><h2>Keep it repeatable</h2><p>Use placeholders for environment-specific details. Include a check after every critical step and stop when it fails.</p><div class="key">A runbook preserves a proven procedure, not a full troubleshooting transcript.</div><div class="example"><span class="example-label">Example</span><h2>Database test setup</h2><p>Document the validated sequence for connecting services and a database, including checks that confirm each setup stage.</p></div>
 </section>
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
 <section class="copy-prompt" aria-label="Ready-to-use prompt"><h2>Ready to apply it? Copy the prompt</h2><p>Paste this prompt into an AI assistant and adapt it to your task.</p><pre class="prompt-text" dir="ltr">Verified setup runbook
@@ -36,9 +33,7 @@ Rules: Ask focused questions when information is missing. Do not treat hypothese
 Hands-on execution: If suitable tools are available, do not stop at proposing tests. Run safe read-only checks yourself: API requests, existing test scripts, read-only log and database queries, and browser checks as appropriate. Start with small targeted tests, show the command or action executed and its actual output, and adapt the next step to the evidence. If a required tool is unavailable, say so explicitly and provide a command or test case I can run.
 
 Ask for explicit approval before writes, configuration changes, data deletion, impactful processes, or testing in production. Never report a proposed test as executed, and never assert a root cause without evidence.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy prompt',2000)})">Copy prompt</button></section></main>
-<script>
-function copyPrompt(button){const text=document.getElementById('runbookPrompt').innerText;navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Copied';setTimeout(()=>button.textContent=old,1400);});}
-</script>
+
 <nav class="reading-nav" aria-label="Field notes navigation">
   <a class="reading-back" href="/field-notes/">← Search all field notes</a>
   <div class="reading-links"><a href="/ai-qa-workflow/" aria-label="Previous field note: AI-Assisted QA Workflow">← AI-Assisted QA Workflow</a><a href="/claude-reuse/" aria-label="Next field note: Reusable Claude Skills">Reusable Claude Skills →</a></div>
