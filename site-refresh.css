@@ -157,3 +157,8 @@ html[dir="rtl"] body.theme-article .copy-prompt .prompt-text{text-align:right}
 body.theme-article .guide-subtitle{font-size:clamp(1.04rem,1.9vw,1.2rem);line-height:1.8;color:#506279;max-width:70ch;margin:16px 0 28px;font-weight:400}
 body.theme-article .article-header .guide-subtitle,body.theme-article header .guide-subtitle{max-width:70ch}
 html[dir="rtl"] body.theme-article .guide-subtitle{text-align:right}
+
+/* Accessible single prompt panel: prevent inherited low-contrast code styles */
+.copy-prompt .prompt-text,.portfolio-v2 .copy-prompt .prompt-text{color:#21364b!important;background:#fff!important;opacity:1!important;-webkit-text-fill-color:#21364b!important;text-shadow:none!important;font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace!important;font-size:.9rem!important;line-height:1.75!important;white-space:pre-wrap!important;overflow-wrap:anywhere}
+.copy-prompt .prompt-copy-button,.portfolio-v2 .copy-prompt .prompt-copy-button{color:#fff!important;background:#174b72!important;opacity:1!important}
+.copy-prompt .prompt-copy-button:hover,.portfolio-v2 .copy-prompt .prompt-copy-button:hover{background:#0e3554!important}
