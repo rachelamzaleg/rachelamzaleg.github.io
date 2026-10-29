@@ -26,7 +26,11 @@
 
 Help review a QA finding. Separate observations, hypotheses and missing evidence. Ask for a passing baseline and reproduction evidence, propose a discriminating check, and flag decisions that require approval.
 
-Rules: Ask focused questions when information is missing. Do not treat hypotheses as facts, invent test results, or request secrets. Propose the next step and wait for my response.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy prompt',2000)})">Copy prompt</button></section></article><div class="footer">Rachel Amzaleg · Senior System &amp; Cybersecurity Quality</div></main><nav class="reading-nav" aria-label="Field notes navigation">
+Rules: Ask focused questions when information is missing. Do not treat hypotheses as facts, invent test results, or request secrets. Propose the next step and wait for my response.
+
+Hands-on execution: If suitable tools are available, do not stop at proposing tests. Run safe read-only checks yourself: API requests, existing test scripts, read-only log and database queries, and browser checks as appropriate. Start with small targeted tests, show the command or action executed and its actual output, and adapt the next step to the evidence. If a required tool is unavailable, say so explicitly and provide a command or test case I can run.
+
+Ask for explicit approval before writes, configuration changes, data deletion, impactful processes, or testing in production. Never report a proposed test as executed, and never assert a root cause without evidence.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy prompt',2000)})">Copy prompt</button></section></article><div class="footer">Rachel Amzaleg · Senior System &amp; Cybersecurity Quality</div></main><nav class="reading-nav" aria-label="Field notes navigation">
   <a class="reading-back" href="/field-notes/">← Search all field notes</a>
   <div class="reading-links"><a href="/claude-knowledge/" aria-label="Previous field note: Context & Reuse">← Context & Reuse</a><a href="/ai-qa-improvement/" aria-label="Next field note: QA Improvement Loop">QA Improvement Loop →</a></div>
 </nav></body></html>
