@@ -45,3 +45,14 @@
 .portfolio-v2 .hero .subtle{margin-inline-start:18px;margin-left:0}
 [dir="rtl"] .portfolio-v2 .hero{grid-template-columns:minmax(0,1fr) 285px}
 @media(max-width:800px){.portfolio-v2 .hero,[dir="rtl"] .portfolio-v2 .hero{grid-template-columns:1fr;gap:28px;padding:44px 0 52px}.portfolio-v2 .hero h1{font-size:clamp(2.1rem,7vw,3rem)}.portfolio-v2 .hero-visual{max-width:520px;width:100%;padding:22px}.portfolio-v2 .visual-title{margin-bottom:12px}.portfolio-v2 .visual-row{padding:8px 0}.portfolio-v2 .visual-foot{margin-top:14px}}
+
+/* Hero layout refinement after visual QA */
+.portfolio-v2 .hero,[dir="rtl"] .portfolio-v2 .hero{display:block;max-width:850px;margin-inline:auto;padding:72px 0 78px;text-align:start}
+.portfolio-v2 .hero-copy{max-width:800px}
+.portfolio-v2 .hero h1{font-size:clamp(2.45rem,4.1vw,3.8rem);line-height:1.23;max-width:780px;margin:18px 0 25px}
+.portfolio-v2 .hero-title-second{display:block;font-size:.78em;font-weight:650;color:#3d6576;letter-spacing:-.02em;margin-top:8px}
+.portfolio-v2 .hero .lead{max-width:740px;line-height:1.9}
+.portfolio-v2 .hero-visual{display:none!important}
+.portfolio-v2 .hero .eyebrow{letter-spacing:.025em;line-height:1.7}
+[dir="rtl"] .portfolio-v2 .hero .eyebrow{font-size:.83rem}
+@media(max-width:800px){.portfolio-v2 .hero,[dir="rtl"] .portfolio-v2 .hero{padding:45px 0 56px}.portfolio-v2 .hero h1{font-size:clamp(2rem,7vw,3.1rem)}.portfolio-v2 .hero-title-second{font-size:.8em}}
