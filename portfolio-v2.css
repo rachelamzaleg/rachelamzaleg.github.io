@@ -96,3 +96,8 @@ html[dir="rtl"] .portfolio-v2 .subtle{margin-left:0;margin-right:18px}
 @media(prefers-reduced-motion:reduce){.portfolio-v2 .note{transition:none}}
 
 .portfolio-v2 .guide-article .guide-intro .lead{font-size:clamp(1.08rem,2vw,1.2rem);line-height:1.8;max-width:70ch}
+
+/* Accessible single prompt panel: prevent inherited low-contrast code styles */
+.copy-prompt .prompt-text,.portfolio-v2 .copy-prompt .prompt-text{color:#21364b!important;background:#fff!important;opacity:1!important;-webkit-text-fill-color:#21364b!important;text-shadow:none!important;font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace!important;font-size:.9rem!important;line-height:1.75!important;white-space:pre-wrap!important;overflow-wrap:anywhere}
+.copy-prompt .prompt-copy-button,.portfolio-v2 .copy-prompt .prompt-copy-button{color:#fff!important;background:#174b72!important;opacity:1!important}
+.copy-prompt .prompt-copy-button:hover,.portfolio-v2 .copy-prompt .prompt-copy-button:hover{background:#0e3554!important}
