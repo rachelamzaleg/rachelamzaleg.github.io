@@ -12,6 +12,10 @@
 <section><h2>דוגמת הנחיה ל־Claude</h2><div class="tool"><div class="tool-head"><strong>Prompt מוכן</strong><button class="copy-btn" type="button" onclick="copyGuidePrompt(this)">העתקה</button></div><pre id="guide-prompt" class="prompt">Create a reusable QA setup runbook using only verified steps.
 Include prerequisites, commands, placeholders and verification checks.
 Exclude secrets, failed attempts and guesses.
-Stop and ask when a configuration fact is unknown.</pre></div></section></article>
+Stop and ask when a configuration fact is unknown.</pre></div></section><section class="copy-prompt" aria-label="פרומפט מוכן לשימוש"><h2>רוצים ליישם? העתיקו את הפרומפט</h2><p>פרומפט שאפשר להדביק בכל עוזר AI ולהתאים למשימה שלכם.</p><pre class="prompt-text" dir="rtl">יצירת Runbook מסביבת בדיקות מאומתת
+
+עזור לי להפוך תהליך התקנה שכבר עבד ל־Runbook חוזר. שאל אילו שלבים ופקודות אומתו; אל תמציא פקודות. סדר דרישות מקדימות, צעדים, בדיקות הצלחה, תנאי עצירה ופרמטרים להחלפה. אל תכלול סודות.
+
+כללים: שאל שאלות ממוקדות אם חסר מידע. אל תניח שהשערה היא עובדה, אל תמציא תוצאות, ואל תבקש סיסמאות או מידע רגיש. הצג את הצעד הבא והמתן לתשובתי.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='הועתק!';setTimeout(()=>this.textContent='העתקת הפרומפט',2000)})">העתקת הפרומפט</button></section></article>
 <nav class="article-nav" aria-label="מעבר בין מדריכים"><a class="back" href="/he/field-notes/">← לכל המדריכים ולחיפוש</a><a href="/he/ai-qa-improvement/">→ המדריך הקודם: איך משפרים את הבדיקות מפעם לפעם</a><a href="/he/claude-reuse/">המדריך הבא: להפוך עבודה שחוזרת ל־Claude Skill ←</a></nav>
 </main><footer>Rachel Amzaleg · QA ומדריכים מעשיים</footer></div><script>function copyGuidePrompt(button){const el=document.getElementById('guide-prompt');navigator.clipboard.writeText(el.textContent).then(()=>{button.textContent='הועתק!';setTimeout(()=>{button.textContent='העתקה'},1500)}).catch(()=>{button.textContent='העתיקו ידנית'})}</script></body></html>
