@@ -26,7 +26,11 @@ List unsupported assumptions, missing cases, contradictions and open questions.
 Do not invent expected behavior or silently rewrite the draft.</pre></div><div class="key">Creation and validation are separate responsibilities.</div>
 </section>
 <div class="footer"><a href="/">Back to Working with Claude in QA</a></div>
-</main>
+<section class="copy-prompt"><h2>Ready to apply it? Copy the prompt</h2><p>A ready-to-use prompt to adapt to your task.</p><pre class="prompt-text" dir="ltr">Separate drafting and validation roles
+
+Help decide whether a task warrants separate drafting and validation. Define deliverables, evidence and approval points. The validator should flag gaps without silently rewriting findings. Keep simple tasks simple.
+
+Ask focused questions, never invent findings, and propose one step at a time.</pre><button type="button" class="prompt-copy-button" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy prompt',2000)})">Copy prompt</button></section></main>
 <script>
 function copyPrompt(button){const text=document.getElementById('rolePrompt').innerText;navigator.clipboard.writeText(text).then(()=>{const old=button.textContent;button.textContent='Copied';setTimeout(()=>button.textContent=old,1400);});}
 </script>
