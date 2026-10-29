@@ -152,3 +152,8 @@ body.theme-article .copy-prompt .prompt-copy-button:focus-visible{outline:3px so
 body.theme-article a{overflow-wrap:anywhere}
 html[dir="rtl"] body.theme-article .copy-prompt .prompt-text{text-align:right}
 @media(max-width:650px){body.theme-article .copy-prompt{margin-inline:0}body.theme-article .copy-prompt .prompt-text{max-height:350px}}
+
+/* Distinct, readable title + subtitle hierarchy on all legacy guides */
+body.theme-article .guide-subtitle{font-size:clamp(1.04rem,1.9vw,1.2rem);line-height:1.8;color:#506279;max-width:70ch;margin:16px 0 28px;font-weight:400}
+body.theme-article .article-header .guide-subtitle,body.theme-article header .guide-subtitle{max-width:70ch}
+html[dir="rtl"] body.theme-article .guide-subtitle{text-align:right}
