@@ -94,3 +94,5 @@ html[dir="rtl"] .portfolio-v2 .subtle{margin-left:0;margin-right:18px}
 .portfolio-v2 footer{margin-top:30px}
 @media(max-width:700px){.portfolio-v2{padding-inline:19px}.portfolio-v2 .nav{align-items:flex-start;flex-direction:column;gap:12px}.portfolio-v2 .grid,.portfolio-v2 .notes{grid-template-columns:1fr}.portfolio-v2 .hero{padding-block:40px}.portfolio-v2 .hero .lead{font-size:1.06rem}.portfolio-v2 .subtle{display:inline-block;margin:12px 0!important}}
 @media(prefers-reduced-motion:reduce){.portfolio-v2 .note{transition:none}}
+
+.portfolio-v2 .guide-article .guide-intro .lead{font-size:clamp(1.08rem,2vw,1.2rem);line-height:1.8;max-width:70ch}
